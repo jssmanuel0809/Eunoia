@@ -68,20 +68,20 @@ class Header extends HTMLElement {
       <header>
             <!-- HEADER - LOGO, LOGIN, CART-->
           <div class="headerlogo">
-              <a href="/Users/jemi/Code/EUNOIA/index.html"><img class="logo" src="/Users/jemi/Code/EUNOIA/public/image/logotextwhite.png"></a>
-              <a href="#login"><img class="righticons" src="/Users/jemi/Code/EUNOIA/public/image/user.png"></a>
-              <a href=""><img class="righticons" src="/Users/jemi/Code/EUNOIA/public/image/cart.png"></a>
+              <a href="index.html"><img class="logo" src="public/image/logotextwhite.png"></a>
+              <a href="#login"><img class="righticons" src="public/image/user.png"></a>
+              <a href=""><img class="righticons" src="public/image/cart.png"></a>
           </div>
 
             <!-- HEADER - NAV -->
           <div class="headernav">
-              <a href="/Users/jemi/Code/EUNOIA/index.html">HOME</a>
-              <a href="/Users/jemi/Code/EUNOIA/pages/shop.html">SHOP ALL</a>
-              <a href="/Users/jemi/Code/EUNOIA/pages/apparel.html">APPARELS</a>
-              <a href="/Users/jemi/Code/EUNOIA/pages/accessories.html">ACCESSORIES</a>
-              <a href="/Users/jemi/Code/EUNOIA/pages/books.html">BOOKS</a>
-              <a href="/Users/jemi/Code/EUNOIA/pages/faqs.html">FAQS</a>
-              <a href="/Users/jemi/Code/EUNOIA/pages/about.html">ABOUT</a>
+              <a href="index.html">HOME</a>
+              <a href="pages/shop.html">SHOP ALL</a>
+              <a href="pages/apparel.html">APPARELS</a>
+              <a href="pages/accessories.html">ACCESSORIES</a>
+              <a href="pages/books.html">BOOKS</a>
+              <a href="pages/faqs.html">FAQS</a>
+              <a href="pages/about.html">ABOUT</a>
           </div>
         </header>
         `;
