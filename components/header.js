@@ -75,7 +75,7 @@ class Header extends HTMLElement {
 
             <!-- HEADER - NAV -->
           <div class="headernav">
-              <a href="index.html">HOME</a>
+              <a href="../index.html">HOME</a>
               <a href="../pages/shop.html">SHOP ALL</a>
               <a href="../pages/apparel.html">APPARELS</a>
               <a href="../pages/accessories.html">ACCESSORIES</a>
