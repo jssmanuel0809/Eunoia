@@ -1,0 +1,400 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Courier;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+    scroll-behavior: smooth;
+}
+
+html{
+    height: fit-content;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+*,
+*::before
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+h1{
+    color: #000000;
+    font-family: 'Lucida Handwriting', Abadi MT Condensed Light;
+    font-size: 6rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+section{
+    margin-top: 0px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.FAQS{
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+.FAQS-Title{
+    padding-bottom: 50px;
+}
+
+.column1, .column2{
+    display: flex;
+    flex-direction: row;
+}
+
+/*---------------------------------1ST CONTAINER------------------------------------------*/
+
+.container1{
+    width: 50%;
+    max-width: 60rem;
+    margin-left: 30px;
+    margin-right: 10px;
+    padding: 0 3.5rem;
+}
+h2{
+    color: #000000;
+    font-family: 'Rockwell', serif;
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+.accordion-item1{
+    background: linear-gradient(to right, #654ea3, #eaafc8);
+    background-color: #9796f0;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: .5rem 2px .5rem rgba(0,0,0,.1);
+}
+
+.accordion-link1{
+    font-size: 1.6rem;
+    color: #000000;
+    text-decoration: none;
+    background: linear-gradient(to right, #654ea3, #eaafc8);
+    background-color: #9796f0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    font-family: 'Copperplate Gothic Light', Abadi MT Condensed Light;
+    font-weight: bold;
+}
+
+.accordion-link1 i{
+    color: #000000;
+    padding: .5rem;
+}
+
+.accordion-link1 .ion-md-remove{
+    display: none;
+}
+
+.answer1{
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: #E6E6FA;
+    transition: max-height 650ms;
+}
+
+.answer1::before{
+    content: "";
+    position: absolute;
+    width: .6rem;
+    height: 90%;
+    background-color: #eaafc8;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.answer1 p{
+    color: #000000;
+    padding: 2rem;
+    font-size: 1.4rem;
+    font-family: 'Coronet script', cursive;
+    text-align: justify;
+}
+
+.accordion-item1:target .answer1{
+    max-height: 25rem;
+}
+
+.accordion-item1:target .accordion-link1 .ion-md-add{
+    display: none;
+}
+
+.accordion-item1:target .accordion-link1 .ion-md-remove{
+    display: block;
+}
+
+/*---------------------------------2ND CONTAINER------------------------------------------*/
+
+
+
+.container4{
+    width: 50%;
+    max-width: 60rem;
+    margin-right: 30px;
+    margin-left: 10px;
+    padding: 0 3.5rem;
+}
+
+.accordion-item4{
+    background: linear-gradient(to left, #654ea3, #eaafc8);
+    background-color: #9796f0;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: .5rem 2px .5rem rgba(0,0,0,.1);
+}
+
+.accordion-link4{
+    background: linear-gradient(to left, #654ea3, #eaafc8);
+    font-size: 1.6rem;
+    color: #000000;
+    text-decoration: none;
+    background-color: #9796f0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    font-family: 'Copperplate Gothic Light', Abadi MT Condensed Light;
+    font-weight: bold;
+}
+
+.accordion-link4 i{
+    color: #000000;
+    padding: .5rem;
+}
+
+.accordion-link4 .ion-md-remove{
+    display: none;
+}
+
+.answer4{
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: #E6E6FA;
+    transition: max-height 650ms;
+}
+
+.answer4::before{
+    content: "";
+    position: absolute;
+    width: .6rem;
+    height: 90%;
+    background-color: #654ea3;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.answer4 p{
+    color: #000000;
+    padding: 2rem;
+    font-size: 1.4rem;
+    font-family: 'Coronet script', cursive;
+    text-align: justify;
+}
+
+.accordion-item4:target .answer4{
+    max-height: 25rem;
+}
+
+.accordion-item4:target .accordion-link4 .ion-md-add{
+    display: none;
+}
+
+.accordion-item4:target .accordion-link4 .ion-md-remove{
+    display: block;
+}
+
+
+
+/*---------------------------------3RD CONTAINER------------------------------------------*/
+
+
+
+.container3{
+    width: 50%;
+    max-width: 60rem;
+    margin-right: 30px;
+    margin-left: 10px;
+    padding: 0 3.5rem;
+}
+
+.accordion-item3{
+    background: linear-gradient(to left, #d9a7c7, #fffcdc);
+    background-color: #FFF0F5;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: .5rem 2px .5rem rgba(0,0,0,.1);
+}
+
+.accordion-link3{
+    background: linear-gradient(to left, #d9a7c7, #fffcdc);
+    font-size: 1.6rem;
+    color: #000000;
+    text-decoration: none;
+    background-color: #FFF0F5;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    font-family: 'Copperplate Gothic Light', Abadi MT Condensed Light;
+    font-weight: bold;
+}
+
+.accordion-link3 i{
+    color: #000000;
+    padding: .5rem;
+}
+
+.accordion-link3 .ion-md-remove{
+    display: none;
+}
+
+.answer3{
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: #E6E6FA;
+    transition: max-height 650ms;
+}
+
+.answer3::before{
+    content: "";
+    position: absolute;
+    width: .6rem;
+    height: 90%;
+    background-color: #d9a7c7;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.answer3 p{
+    color: #000000;
+    padding: 2rem;
+    font-size: 1.4rem;
+    font-family: 'Coronet script', cursive;
+    text-align: justify;
+}
+
+.accordion-item3:target .answer3{
+    max-height: 25rem;
+}
+
+.accordion-item3:target .accordion-link3 .ion-md-add{
+    display: none;
+}
+
+.accordion-item3:target .accordion-link3 .ion-md-remove{
+    display: block;
+}
+
+
+/*---------------------------------4TH CONTAINER------------------------------------------*/
+
+
+.container2{
+    width: 50%;
+    max-width: 60rem;
+    margin-right: 30px;
+    margin-left: 10px;
+    padding: 0 3.5rem;
+}
+
+.accordion-item2{
+    background: linear-gradient(to right, #d9a7c7, #fffcdc);
+    background-color: #FFF0F5;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: .5rem 2px .5rem rgba(0,0,0,.1);
+}
+
+.accordion-link2{
+    background: linear-gradient(to right, #d9a7c7, #fffcdc);
+    font-size: 1.6rem;
+    color: #000000;
+    text-decoration: none;
+    background-color: #FFF0F5;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    font-family: 'Copperplate Gothic Light', Abadi MT Condensed Light;
+    font-weight: bold;
+}
+
+.accordion-link2 i{
+    color: #000000;
+    padding: .5rem;
+}
+
+.accordion-link2 .ion-md-remove{
+    display: none;
+}
+
+.answer2{
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: #E6E6FA;
+    transition: max-height 650ms;
+}
+
+.answer2::before{
+    content: "";
+    position: absolute;
+    width: .6rem;
+    height: 90%;
+    background-color: #fffcdc;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.answer2 p{
+    color: #000000;
+    padding: 2rem;
+    font-size: 1.4rem;
+    font-family: 'Coronet script', cursive;
+    text-align: justify;
+}
+
+.accordion-item2:target .answer2{
+    max-height: 25rem;
+}
+
+.accordion-item2:target .accordion-link2 .ion-md-add{
+    display: none;
+}
+
+.accordion-item2:target .accordion-link2 .ion-md-remove{
+    display: block;
+}
