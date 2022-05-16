@@ -10,46 +10,30 @@ class Footer extends HTMLElement {
             width: 100%;
             color: #d9d9d9;
         }
-        .content1{
-            position: relative;
-            margin: 130px auto;
-            text-align: center;
-            padding: 0 20px;
-        }
-        .content1 .text{
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: #202020;
-        }
-        .content1 .p{
-            font-size: 2.1875rem;
-            font-weight: 600;
-            color: #202020;
-        }
         footer{
             position: relative;
             bottom: 0px;
             width: 100%;
             background: linear-gradient(to right, #3c1053, #ad5389);
         }
-        .main-content{
+        .footer-box{
             display: flex;
         }
-        .main-content .box{
+        .footer-box .content-box{
             flex-basis: 50%;
             padding: 10px 20px;
         }
-        .box h2{
+        .content-box h2{
             font-family: Courier;
             font-size: 1.125rem;
             font-weight: 600;
             text-transform: uppercase;
         }
-        .box .context{
+        .content-box .footer-context{
             margin: 20px 0 0 0;
             position: relative;
         }
-        .box .context:before{
+        .content-box .footer-context:before{
             position: absolute;
             content: '';
             top: -10px;
@@ -57,7 +41,7 @@ class Footer extends HTMLElement {
             width: 100%;
             background: #1a1a1a;
         }
-        .box .context:after{
+        .content-box .footer-context:after{
             position: absolute;
             content: '';
             height: 2px;
@@ -65,18 +49,18 @@ class Footer extends HTMLElement {
             background: #F582A7;
             top: -10px;
         }
-        .left .context p{
+        .social-box .footer-context p{
             font-family: Courier;
             text-align: justify;
         }
-        .left .context .social{
+        .social-box .footer-context .social{
             margin: 20px 0 0 0;
         }
-        .left .context .social a{
+        .social-box .footer-context .social a{
             padding: 0 2px;
             color: #d9d9d9;
         }
-        .left .context .social a span{
+        .social-box .footer-context .social a span{
             height: 40px;
             width: 40px;
             background: #711A75;
@@ -86,10 +70,10 @@ class Footer extends HTMLElement {
             border-radius: 5px;
             transition: 0.3s;
         }
-        .left .context .social a span:hover{
+        .social-box .footer-context .social a span:hover{
             background: #F10086;
         }
-        .center .context .fas{
+        .contact-box .footer-context .fas{
             font-size: 1.4375rem;
             background: #711A75;
             height: 45px;
@@ -100,28 +84,28 @@ class Footer extends HTMLElement {
             transition: 0.3s;
             cursor: pointer;
         }
-        .center .context .fas:hover{
+        .contact-box .footer-context .fas:hover{
             background: #F10086;
         }
-        .center .context .text{
+        .contact-box .footer-context .text{
             font-family: Courier;
             font-size: 1.0625rem;
             font-weight: 500;
             padding-left: 10px;
         }
-        .center .content .phone{
+        .contact-box .content .phone{
             margin: 15px 0;
         }
-        .right form .text{
+        .message-box form .text{
             font-family: Courier;
             font-size: 1.0625rem;
             margin-bottom: 2px;
             color: white;
         }
-        .right form .msg{
+        .message-box form .msg{
             margin-top: 10px;
         }
-        .right form input, .right form textarea{
+        .message-box form input, .message-box form textarea{
             width: 100%;
             font-size: 1.0625rem;
             color: white;
@@ -129,15 +113,13 @@ class Footer extends HTMLElement {
             padding-left: 10px;
             border: 1px solid #222222;
         }
-        // .right form input:focus,
-        // }
-        .right form input{
+        .message-box form input{
             height: 35px;
         }
-        .right form .stud{
+        .message-box form .stud{
             margin-top: 10px;
         }
-        .right form .stud button{
+        .message-box form .stud button{
             height: 40px;
             width: 100%;
             border: none;
@@ -148,22 +130,22 @@ class Footer extends HTMLElement {
             cursor: pointer;
             transition: .3s;
         }
-        .right form .stud button:hover{
+        .message-box form .stud button:hover{
             background:#711A75;
         }
-        .bottom center{
+        .bottom-footer center{
             padding: 5px;
             font-size: 0.9375rem;
             background: #180A0A;
         }
-        .bottom center span{
+        .bottom-footer center span{
             color: #656565;
         }
-        .bottom center a{
+        .bottom-footer center a{
             color: #E9D5DA;
             text-decoration: none;
         }
-        .bottom center a:hover{
+        .bottom-footer center a:hover{
             text-decoration: underline;
         }
         @media screen and (max-width: 900px) {
@@ -171,11 +153,11 @@ class Footer extends HTMLElement {
                 position: relative;
                 bottom: 0px;
             }
-            .main-content{
+            .footer-box{
                 flex-wrap: wrap;
                 flex-direction: column;
             }
-            .main-content .box{
+            .footer-box .content-box{
                 margin: 5px 0;
             }
         }
@@ -184,10 +166,10 @@ class Footer extends HTMLElement {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
         <footer>
-        <div class="main-content">
-            <div class="left box">
+        <div class="footer-box">
+            <div class="social-box content-box">
                 <h2>SOCIALS</h2>
-                <div class="context">
+                <div class="footer-context">
                 <p>Support us in our Social Medias and stay updated in our latest products.</p>
                 <div class="social">
                     <a href="https://www.tiktok.com/@matt.court/video/7081701573725785350?is_copy_url=1&is_from_webapp=v1&q=oh%20baby&t=1650560181448"><span class="fab fa-facebook-f"></span></a>
@@ -197,26 +179,26 @@ class Footer extends HTMLElement {
                 </div>
                 </div>
             </div>
-            <div class="center box">
+            <div class="contact-box content-box">
                 <h2>Address</h2>
-                <div class="context">
-                <div class="place">
+                <div class="footer-context">
+                <div class="contact-address">
                     <span class="fas fa-map-marker-alt"></span>
                     <span class="text">898 Street, Bonifacio Global City.</span>
                 </div>
-                <div class="phone">
+                <div class="contact-phone">
                     <span class="fas fa-phone-alt"></span>
                     <span class="text">+898-56-37</span>
                 </div>
-                <div class="email">
+                <div class="contact-email">
                     <span class="fas fa-envelope"></span>
                     <span class="text">eunoia.customer.service@gmail.com</span>
                 </div>
                 </div>
             </div>
-            <div class="right box">
+            <div class="message-box content-box">
                 <h2>Contact us</h2>
-                <div class="context">
+                <div class="footer-context">
                     <form action="#">
                         <div class="email">
                         <div class="text">Email *</div>
@@ -233,7 +215,7 @@ class Footer extends HTMLElement {
                 </div>
             </div>
         </div>
-        <div class="bottom">
+        <div class="bottom-footer">
         <center>
             <span class="credit"><a href="https://www.tiktok.com/@cyleu/video/7033603953359146267?is_copy_url=1&is_from_webapp=v1&q=viper&t=1650561372685">Eunoia</a> | </span>
             <span class="far fa-copyright"></span><span> 2022 All rights reserved.</span>

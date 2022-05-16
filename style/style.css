@@ -12,11 +12,10 @@
             box-sizing: border-box;
 }
 body{
-    /* transition: background 0.2s linear; */
     height: 100%;
 }
 section{
-    padding: 5rem 10%;
+    padding: 20px 40px;
 }
 /*----------AD POPUP----------*/
 .ad-overlay {
@@ -138,5 +137,101 @@ section h5{
   font-size: 20px;
   margin-top: 20px;
   float: right;
+}
+
+/* ----------CUSTOMER REVIEW---------- */
+.customer-review h2 {
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  /* font-family: "Roboto", sans-serif; */
+  /* font-weight: bold; */
+  position: relative;
+  margin: 25px 0 50px;
+}
+.carousel {
+  height: 400px;
+  width: 700px;
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+/* CUSTOMER REVIEW/SLIDES */
+.carousel .carousel-item {
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  min-height: 260px;
+}
+.carousel .carousel-item a {
+  color: #561872;
+}
+/* BOX FOR NAME AND STARS */
+.carousel .header-box {
+  /* width: 145px;
+  height: 145px; */
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.carousel .testimonial {
+  padding: 10px 0 10px;
+}
+.carousel .overview {
+  text-align: center;
+  padding-bottom: 5px;
+}
+.carousel .overview b {
+  color: #333;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: block;
+  padding-bottom: 5px;
+}
+/* STARS */
+.carousel .star-rating i {
+  color: #EAC2E6;
+}
+.fa {
+  font: normal normal normal 28px/1 FontAwesome !important;
+}
+/* CAROUSEL CONTROLS */
+.carousel-control-prev, .carousel-control-next {
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50%;
+  background: #9B84AC;
+  text-shadow: none;
+  top: 4px;
+  opacity: 1 !important;
+}
+.carousel-control-prev i, .carousel-control-next i {
+    font-size: 20px;
+    margin-right: 2px;
+}
+.carousel-control-prev {
+  left: auto !important;
+  right: 40px !important;
+}
+.carousel-control-next i {
+  margin-right: -2px;
+}
+/* CAROUSEL INDICATORS */
+.carousel .carousel-indicators {
+  bottom: 15px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+  width: 11px !important;
+  height: 11px !important;
+  margin: 1px 5px;
+  border-radius: 50%;
+}
+.carousel-indicators li {
+  background: #e2e2e2 !important;
+  /* border: none; */
+  border-top: 0 !important;
+  box-sizing: border-box !important
+}
+.carousel-indicators li.active {
+  background: #9B84AC !important;
 }
 
