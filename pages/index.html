@@ -6,16 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <title>EUNOIA</title>
-        <link rel="shortcut icon" href="public/image/logo.png">
+        <link rel="shortcut icon" href="../public/image/logo.png">
 
-        <link rel="stylesheet" href="./style/style.css">
+        <link rel="stylesheet" href="../style/style.css">
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
         <!-- components -->
         <!-- <script src="./components/header.js" type="text/javascript" defer></script> -->
-        <script src="./components/footer.js" type="text/javascript" defer></script>
-        <script src="./components/user.js" type="text/javascript" defer></script>
+        <script src="../components/footer.js" type="text/javascript" defer></script>
+        <script src="../components/user.js" type="text/javascript" defer></script>
         <!-- <script src="js/authentication.js"></script> -->
 
 
@@ -23,31 +23,13 @@
     <body>
         
             <!-- HEADER -->
-            <header>
-                <!-- HEADER - LOGO, LOGIN, CART-->
-              <div class="headerlogo">
-                  <a href="index.html"><img class="logo" src="public/image/logotextwhite.png"></a>
-                  <a href="#login"><img class="righticons" src="public/image/user.png"></a>
-                  <a href=""><img class="righticons" src="public/image/cart.png"></a>
-              </div>
-    
-                <!-- HEADER - NAV -->
-              <div class="headernav">
-                  <a href="index.html">HOME</a>
-                  <a href="pages/shop.html">SHOP ALL</a>
-                  <a href="pages/apparel.html">APPARELS</a>
-                  <a href="pages/accessories.html">ACCESSORIES</a>
-                  <a href="pages/books.html">BOOKS</a>
-                  <a href="pages/faqs.html">FAQS</a>
-                  <a href="pages/about.html">ABOUT</a>
-              </div>
-            </header>
+            <header-component></header-component>
 
         <!-- AD - POP UP -->
         <div id="popupinhome" class="ad-overlay">
             <div class="adpopup">
                 <a class="adclose" href="#popupinhome">&times;</a>
-                <img src="public/image/ad popup.gif">
+                <img src="../public/image/ad popup.gif">
             </div>
         </div>
 
@@ -60,10 +42,10 @@
                 <h3>First Day of Summer Tote</h3>
                 <!---<span> Description</span>--->
                 <p>This totebag is made with high-quality recycled materials and has a minimalistic yet trendy design.</p>
-                <a href="pages/shop.html" class="topbtn">SHOP NOW</a>
+                <a href="../pages/shop.html" class="topbtn">SHOP NOW</a>
             </div>
             <div class="imagecontainer">
-                <img src="public/image/totes/to2.png"></img>
+                <img src="../public/image/totes/to2.png"></img>
             </div>
         </section>
 
@@ -78,10 +60,6 @@
         <!-- -----POPULAR PRODUCTS----- -->
 
         <!-- -----CUSTOMER'S REVIEWS----- -->
-        <section>
-            <h2>CUSTOMER'S REVIEW</h2>
-            <p>Edit here</p>
-        </section>
 
             <!-- FOOTER -->
         <footer-component></footer-component>
