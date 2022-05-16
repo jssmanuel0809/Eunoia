@@ -4,8 +4,8 @@ E-commerce website: Requirements for Applications Development & Empowerment Tech
 Repository made after Midterms submissions.
 
 Members:
-Azores, Nicole Irish
-Chuyat, Sunshine
-Manuel, Jemima Simone
-Tuliao, Rose Therese
-Yara, Chloe Dionne
+- Azores, Nicole Irish
+- Chuyat, Sunshine
+- Manuel, Jemima Simone
+- Tuliao, Rose Therese
+- Yara, Chloe Dionne
