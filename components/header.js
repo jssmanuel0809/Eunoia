@@ -66,6 +66,7 @@ class Header extends HTMLElement {
         }
         .headernav a:hover{
           color: black;
+          text-decoration-line: none;
         }
         </style>
       </head>
