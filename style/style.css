@@ -166,6 +166,14 @@ section h5{
   float: left;
   /* background: lightgray; */
 }
+.MultiCarousel .MultiCarousel-inner .item > div {
+  text-align: center;
+  padding:10px;
+  margin:10px;
+  background:#f1f1f1;
+  color:#666;
+  height: 350px;
+}
 .MultiCarousel .MultiCarousel-inner .item .pad10{
   border-radius: 15px;
 }
@@ -186,6 +194,12 @@ section h5{
   margin-top: 15px;
   width: 100%;
 }
+.MultiCarousel .MultiCarousel-inner .item .pad10 .popular-book {
+  height: 150px;
+}
+.MultiCarousel .MultiCarousel-inner .item .pad10 .popular-book, .MultiCarousel .MultiCarousel-inner .item .pad10 .popular-shirt {
+  margin-bottom: 20px;
+}
 .MultiCarousel .MultiCarousel-inner .item .pad10 .popular-btn {
   display: inline-block;
   background: #6C5B7B;
@@ -202,13 +216,6 @@ section h5{
   color: #fff;
   background: #C06C84;
   cursor: pointer;
-}
-.MultiCarousel .MultiCarousel-inner .item > div {
-  text-align: center;
-  padding:10px;
-  margin:10px;
-  background:#f1f1f1;
-  color:#666;
 }
 /* CONTROLS */
 .MultiCarousel .leftLst, .MultiCarousel .rightLst {
