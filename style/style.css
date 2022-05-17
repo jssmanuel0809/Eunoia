@@ -162,7 +162,10 @@ section h5{
 }
 .MultiCarousel .MultiCarousel-inner .item {
   float: left;
-  background: lightgray;
+  /* background: lightgray; */
+}
+.MultiCarousel .MultiCarousel-inner .item .pad10{
+  border-radius: 15px;
 }
 /* CONTENT */
 .MultiCarousel .MultiCarousel-inner .item .pad10 h4{
@@ -183,19 +186,19 @@ section h5{
 }
 .MultiCarousel .MultiCarousel-inner .item .pad10 .popular-btn {
   display: inline-block;
-  background: #333;
+  background: #6C5B7B;
   color: white;
   padding: 5px 15px;
   border-radius: 5px;
-  transition: background 0.5s;
+  transition: background-color 0.5s;
   text-decoration: none;
   border: none;
   margin-top: 10px;
   font-size: 17px;
 }
-.MultiCarousel .MultiCarousel-inner .item .pad10 .popular-btn:hover {
-  background: #6C5B7B;
-  color: white;
+.MultiCarousel .MultiCarousel-inner .item .pad10 .popular-btn:hover{
+  color: #fff;
+  background: #C06C84;
   cursor: pointer;
 }
 .MultiCarousel .MultiCarousel-inner .item > div {
@@ -219,11 +222,16 @@ section h5{
 }
 .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over {
   pointer-events: none;
-  background:#ccc;
+  background:#ccc !important;
+  border-color: #ccc !important;
 }
 .btn-primary {
   background-color: #9B84AC !important;
   border-color: #9B84AC !important;
+}
+.btn-primary.focus, .btn-primary:focus {
+  color: #fff;
+  box-shadow: 0 0 0 .2rem whitesmoke !important;
 }
 
 /* ----------CUSTOMER REVIEW---------- */
