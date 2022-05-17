@@ -54,7 +54,7 @@ class Header extends HTMLElement {
           position: fixed;
           top: 50; left: 0; right: 0;
           background: #fff;
-          padding: 1rem 20%;
+          padding: 10px 10%;
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -67,6 +67,65 @@ class Header extends HTMLElement {
         .headernav a:hover{
           color: black;
           text-decoration-line: none;
+        }
+
+        <!--dark mode css-->
+        body.dark {
+          background-color: gray;
+          color: white;
+        }
+        .checkboxmode {
+          opacity: 0;
+          position: absolute;
+        }
+        /* edit mo nalang to depende kung san mo ilalagay/position yung toggle */
+        .labelmode {
+          background-color: gray;
+          border-radius: 50px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 5px;
+          position: relative;
+          height: 20px;
+          width: 44px;
+          transform: scale(1.3);
+          margin-right: 45px;
+          margin-top: 5px;
+        }
+        /* ito yung gumagalaw na circle pag nagttoggle ganon */
+        .labelmode .ballmode {
+            /* palitan mo nalang color if di bagay white para dun sa circle */
+          background-color: #fff;
+          border-radius: 50%;
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          height: 16px;
+          width: 16px;
+          transform: translateX(0px);
+          transition: transform 0.2s linear;
+        }
+        
+        .checkboxmode:checked + .labelmode .ballmode {
+          transform: translateX(24px);
+        }
+        
+        .clock #time{
+          margin-bottom: 0px;
+          padding-left: 50px;
+        }
+
+        .darkmode{
+          background-color: gray;
+          color: white;
+        }
+        .darkmode .headernav{
+          background-color: black;
+        }
+        .darkmode .content{
+          color: white;
         }
         </style>
       </head>
@@ -81,6 +140,14 @@ class Header extends HTMLElement {
 
             <!-- HEADER - NAV -->
           <div class="headernav">
+          <!--dark mode-->
+          <div>
+            <input type="checkbox" onclick="myFunction()" class="checkboxmode" id="chkmode" />
+            <label class="labelmode" for="chkmode">
+                <div class="ballmode"></div>
+            </label>
+          </div>
+
             <a href="../pages/index.html">HOME</a>
             <a href="../pages/shop.html">SHOP ALL</a>
             <a href="../pages/apparel.html">APPARELS</a>
@@ -88,7 +155,14 @@ class Header extends HTMLElement {
             <a href="../pages/books.html">BOOKS</a>
             <a href="../pages/faqs.html">FAQS</a>
             <a href="../pages/about.html">ABOUT</a>
+
+            <div class="clock" onclick="myFunction()">
+              <p id="time"></p>
+            </div>
           </div>
+
+          
+
       </header>
 
         `;
@@ -96,3 +170,39 @@ class Header extends HTMLElement {
 }
 
 customElements.define('header-component', Header);
+function darkMode(){
+  document.body.style.backgroundColor="gray";
+  const headernav = document.getElementsByClassName("headernav");
+  headernav[0].style.background="black";
+
+}
+
+function currentTime(){
+  let date = new Date();
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
+  let session = "AM";
+
+  if(hours > 12){
+    hours = hours - 12;
+    session = "PM";
+  }
+
+  hours = (hours < 10) ? "0" + hours : hours;
+  minutes = (minutes < 10) ? "0" + minutes : minutes;
+  seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+  time = hours + ":" + minutes + ":" + seconds + " " + session;
+
+  document.getElementById("time").innerHTML = time;
+  setTimeout(function(){currentTime() }, 1000);
+  console.log(time);
+}
+currentTime();
+
+
+function myFunction(){
+  var element = document.body;
+  element.classList.toggle("darkmode");
+}

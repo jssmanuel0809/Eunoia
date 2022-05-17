@@ -75,6 +75,7 @@ section{
     display: flex;
     align-items: center;
     min-height: 100px;
+    justify-content: center;
 }
 .home .content{
     width: 550px;
