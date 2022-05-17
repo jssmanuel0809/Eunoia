@@ -17,10 +17,6 @@ class Header extends HTMLElement {
         header{
           width: 100%
         }
-        .headerlogo #clock{
-          font-size: 10px;
-          color: black;
-        }
         .headerlogo{
           position: fixed;
           background: #355C7D;  /* fallback for old browsers */
@@ -74,8 +70,8 @@ class Header extends HTMLElement {
       <header>
             <!-- HEADER - LOGO, LOGIN, CART-->
           <div class="headerlogo">
-            <a href="index.html"><img class="logo" src="../public/image/logotextwhite.png"></a>
-            <a href="#login"><img class="righticons" src="../public/image/user.png"></a>
+            <a href="../pagesindex.html"><img class="logo" src="../public/image/logotextwhite.png"></a>
+            <a href="../pages/login.html">Login<img class="righticons" src="../public/image/user.png"></a>
             <a href=""><img class="righticons" src="../public/image/cart.png"></a>
           </div>
 
