@@ -17,6 +17,7 @@ body{
 section{
     padding: 20px 40px;
 }
+
 /*----------AD POPUP----------*/
 .ad-overlay {
   position: fixed;
@@ -139,13 +140,98 @@ section h5{
   float: right;
 }
 
-/* ----------CUSTOMER REVIEW---------- */
-.customer-review h2 {
-  color: #333;
+/* ----------POPULAR PRODUCTS---------- */
+/* HEADING */
+.popular-products h3{
   text-align: center;
-  text-transform: uppercase;
-  /* font-family: "Roboto", sans-serif; */
-  /* font-weight: bold; */
+  font-size: 50px;
+  color: #333;
+  position: relative;
+  margin: 25px 0 50px;
+}
+.MultiCarousel {
+  float: left;
+  overflow: hidden;
+  padding: 15px;
+  width: 100%;
+  position:relative;
+}
+.MultiCarousel .MultiCarousel-inner {
+  transition: 1s ease all;
+  float: left;
+}
+.MultiCarousel .MultiCarousel-inner .item {
+  float: left;
+  background: lightgray;
+}
+/* CONTENT */
+.MultiCarousel .MultiCarousel-inner .item .pad10 h4{
+  font-family: Courier;
+  margin-top: 15px;
+  font-size: 20px;
+  color: #333;
+}
+.MultiCarousel .MultiCarousel-inner .item .pad10 p {
+  font-family: Courier;
+  margin-top: 5px;
+  font-size: 18px;
+  color: #333;
+}
+.MultiCarousel .MultiCarousel-inner .item .pad10 img {
+  margin-top: 15px;
+  width: 100%;
+}
+.MultiCarousel .MultiCarousel-inner .item .pad10 .popular-btn {
+  display: inline-block;
+  background: #333;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: background 0.5s;
+  text-decoration: none;
+  border: none;
+  margin-top: 10px;
+  font-size: 17px;
+}
+.MultiCarousel .MultiCarousel-inner .item .pad10 .popular-btn:hover {
+  background: #6C5B7B;
+  color: white;
+  cursor: pointer;
+}
+.MultiCarousel .MultiCarousel-inner .item > div {
+  text-align: center;
+  padding:10px;
+  margin:10px;
+  background:#f1f1f1;
+  color:#666;
+}
+/* CONTROLS */
+.MultiCarousel .leftLst, .MultiCarousel .rightLst {
+  position:absolute;
+  border-radius:50%;
+  top:calc(50% - 20px);
+}
+.MultiCarousel .leftLst {
+  left:0;
+}
+.MultiCarousel .rightLst {
+  right:0;
+}
+.MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over {
+  pointer-events: none;
+  background:#ccc;
+}
+.btn-primary {
+  background-color: #9B84AC !important;
+  border-color: #9B84AC !important;
+}
+
+/* ----------CUSTOMER REVIEW---------- */
+/* HEADING */
+.customer-review h3{
+  text-align: center;
+  font-size: 50px;
+  color: #333;
   position: relative;
   margin: 25px 0 50px;
 }
