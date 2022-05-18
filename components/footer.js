@@ -98,43 +98,6 @@ class Footer extends HTMLElement {
                 .contact-box .content .phone{
                     margin: 15px 0;
                 }
-                .message-box form .text{
-                    font-family: Courier;
-                    font-size: 1.0625rem;
-                    margin-bottom: 2px;
-                    color: white;
-                }
-                .message-box form .msg{
-                    margin-top: 10px;
-                }
-                .message-box form input, .message-box form textarea{
-                    width: 100%;
-                    font-size: 1.0625rem;
-                    color: white;
-                    background: #333;
-                    padding-left: 10px;
-                    border: 1px solid #222222;
-                }
-                .message-box form input{
-                    height: 35px;
-                }
-                .message-box form .stud{
-                    margin-top: 10px;
-                }
-                .message-box form .stud button{
-                    height: 40px;
-                    width: 100%;
-                    border: none;
-                    outline: none;
-                    background: #F10086;
-                    font-size: 1.0625rem;
-                    font-weight: 500;
-                    cursor: pointer;
-                    transition: .3s;
-                }
-                .message-box form .stud button:hover{
-                    background:#711A75;
-                }
                 .bottom-footer center{
                     padding: 5px;
                     font-size: 0.9375rem;
@@ -195,24 +158,6 @@ class Footer extends HTMLElement {
                     <span class="fas fa-envelope"></span>
                     <span class="text">eunoia.customer.service@gmail.com</span>
                 </div>
-                </div>
-            </div>
-            <div class="message-box content-box">
-                <h2>Contact us</h2>
-                <div class="footer-context">
-                    <form onsubmit="sendEmail(); reset(); return false;">
-                        <div class="email">
-                        <div class="text">Email *</div>
-                        <input type="email" id="email" required>
-                        </div>
-                        <div class="msg">
-                        <div class="text">Message *</div>
-                        <textarea id="message" rows="2" cols="25" required></textarea>
-                        </div>
-                        <div class="stud">
-                        <button type="submit">Send</button>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
