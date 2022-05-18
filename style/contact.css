@@ -10,7 +10,6 @@ text-decoration: none;
 transition: .2s linear;
 }
 body{
-height: 100%;
 margin: 0;
 padding: 0;
 box-sizing: border-box;
@@ -89,24 +88,21 @@ border: none;
     background:#711A75;
 } */
 
-.login-box,
-.register-box {
-    height: 65%;
-    width: 60%;
+.login-box{
     margin: 75px auto;
     margin-top: 180px;
     padding: 1px;
-    background: #fff;
+    /* background: #fff; */
     /* border: 1px solid #666; */
     /* width: 50%; */
     /* height: 50%; */
     /* display: flex; */
     /* justify-content: center; */
     /* align-items: center; */
-    box-shadow: 0 0 20px 12px rgba(185,190,208,30%);
+    /* box-shadow: 0 0 20px 12px rgba(185,190,208,30%); */
     /* position: fixed; */
-    border-radius: 15px;
-    opacity: 80%;
+    /* border-radius: 15px; */
+    /* opacity: 80%; */
 }
 /* CONTENT INSIDE POPUP */
 .login-content{
@@ -124,8 +120,6 @@ border: none;
     z-index: 1;
 }
 .login-content .login_form{
-    height: 50%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -134,7 +128,7 @@ border: none;
 }
 /* Full-width input fields */
 input[type=email]{
-    width: 80%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -143,7 +137,7 @@ input[type=email]{
     border-radius: 5px;
 }
 textarea{
-    width: 80%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
