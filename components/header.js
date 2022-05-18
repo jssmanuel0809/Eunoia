@@ -88,6 +88,7 @@ class Header extends HTMLElement {
             <a href="../pages/books.html">BOOKS</a>
             <a href="../pages/faqs.html">FAQS</a>
             <a href="../pages/about.html">ABOUT</a>
+            <a href="../pages/contact.html">CONTACT</a>
           </div>
       </header>
 

@@ -165,7 +165,7 @@ class Footer extends HTMLElement {
                 }
             </style>
         </head>
-
+        <body>
         <footer>
         <div class="footer-box">
             <div class="social-box content-box">
@@ -200,14 +200,14 @@ class Footer extends HTMLElement {
             <div class="message-box content-box">
                 <h2>Contact us</h2>
                 <div class="footer-context">
-                    <form action="#">
+                    <form onsubmit="sendEmail(); reset(); return false;">
                         <div class="email">
                         <div class="text">Email *</div>
-                        <input type="email" required>
+                        <input type="email" id="email" required>
                         </div>
                         <div class="msg">
                         <div class="text">Message *</div>
-                        <textarea rows="2" cols="25" required></textarea>
+                        <textarea id="message" rows="2" cols="25" required></textarea>
                         </div>
                         <div class="stud">
                         <button type="submit">Send</button>
@@ -223,6 +223,10 @@ class Footer extends HTMLElement {
         </center>
         </div>
         </footer>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+        </body>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="../script/email.js"></script>
         `;
   }
 }
