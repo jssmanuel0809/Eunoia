@@ -7,6 +7,8 @@
         
         <title>Contact</title>
 
+        <link rel="stylesheet" href="../style/contact.css">
+
         <!-- components -->
         <script src="../components/header.js" type="text/javascript" defer></script>
 
@@ -16,24 +18,17 @@
             <!-- HEADER -->
         <header-component></header-component>
 
-        <div class="message-box content-box">
-            <h2>Contact us</h2>
-            <div class="footer-context">
+        <div class="login-box">
+            <div class="login-content form">
+                <h2>Contact us</h2>
                 <form onsubmit="sendEmail(); reset(); return false;">
-                    <div class="email">
-                    <div class="text">Email *</div>
-                    <input type="email" id="email" required>
-                    </div>
-                    <div class="msg">
-                    <div class="text">Message *</div>
-                    <textarea id="message" rows="2" cols="25" required></textarea>
-                    </div>
-                    <div class="stud">
-                    <button type="submit">Send</button>
-                    </div>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <textarea id="message" rows="4" cols="25" placeholder="Message"  required></textarea>
+                    <button type="submit" class="SENDbtn">Send</button>
                 </form>
             </div>
         </div>
+        
         <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script src="../script/email.js"></script>
     </body>
