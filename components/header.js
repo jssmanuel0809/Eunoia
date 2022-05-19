@@ -4,7 +4,7 @@ class Header extends HTMLElement {
     }
   
     connectedCallback() {
-      this.innerHTML = `
+      this.innerHTML = `zzzz
       <head>
         <style>
         *{
@@ -155,10 +155,7 @@ class Header extends HTMLElement {
             <a href="../pages/books.html">BOOKS</a>
             <a href="../pages/faqs.html">FAQS</a>
             <a href="../pages/about.html">ABOUT</a>
-
-            <div class="clock" onclick="myFunction()">
-              <p id="time"></p>
-            </div>
+            <a href="../pages/contact.html">CONTACT</a>
           </div>
 
           

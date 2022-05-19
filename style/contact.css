@@ -1,0 +1,167 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Courier;
+font-size: 18px;
+outline: none;
+border: none;
+text-decoration: none;
+transition: .2s linear;
+}
+body{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Courier;
+font-size: 10px;
+outline: none;
+border: none;
+}
+
+/* CONTACT */
+/* .content-box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+.content-box h2{
+    font-family: Courier;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.content-box .footer-context{
+    margin: 20px 0 0 0;
+    position: relative;
+}
+.content-box .footer-context:before{
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+}
+.content-box .footer-context:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 15%;
+    background: #F582A7;
+    top: -10px;
+}
+.message-box form .text{
+    font-family: Courier;
+    font-size: 1.0625rem;
+    margin-bottom: 2px;
+    color: white;
+}
+.message-box form .msg{
+    margin-top: 10px;
+}
+.message-box form input, .message-box form textarea{
+    width: 100%;
+    font-size: 1.0625rem;
+    color: white;
+    background: #333;
+    padding-left: 10px;
+    border: 1px solid #222222;
+}
+.message-box form input{
+    height: 35px;
+}
+.message-box form .stud{
+    margin-top: 10px;
+}
+.message-box form .stud button{
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #F10086;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+.message-box form .stud button:hover{
+    background:#711A75;
+} */
+
+.login-box{
+    margin: 75px auto;
+    margin-top: 180px;
+    padding: 1px;
+    /* background: #fff; */
+    /* border: 1px solid #666; */
+    /* width: 50%; */
+    /* height: 50%; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* box-shadow: 0 0 20px 12px rgba(185,190,208,30%); */
+    /* position: fixed; */
+    /* border-radius: 15px; */
+    /* opacity: 80%; */
+}
+/* CONTENT INSIDE POPUP */
+.login-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 130px;
+    /* margin-bottom: 130px; */
+    /* background: #091033; */
+    /* background-color: white; */
+    /* opacity: 90%; */
+    font-family: 'Lato', sans-serif;
+    z-index: 1;
+}
+.login-content .login_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/* Full-width input fields */
+input[type=email]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+/* SEND BUTTON */
+.Sendbtn {
+    height: 40px;
+    width: 50%;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    outline: none;
+    background: #F10086;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+
+}
+.Sendbtn:hover {
+    background:#711A75
+    cursor: pointer;
+}
