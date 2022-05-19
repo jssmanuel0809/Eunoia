@@ -12,7 +12,7 @@ window.onload = () => {
     }
 }
 
-form validation
+//form validation
 
 const name = document.querySelector('.name') || null;
 const email = document.querySelector('.email');
