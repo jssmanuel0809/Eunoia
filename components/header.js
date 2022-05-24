@@ -71,8 +71,9 @@ class Header extends HTMLElement {
             <!-- HEADER - LOGO, LOGIN, CART-->
           <div class="headerlogo">
             <a href="../pagesindex.html"><img class="logo" src="../public/image/logotextwhite.png"></a>
-            <a href="../pages/login.html">Login<img class="righticons" src="../public/image/user.png"></a>
+            <a href="/login" class="greeting">Hello, User<img class="righticons" src="../public/image/user.png"></a>
             <a href=""><img class="righticons" src="../public/image/cart.png"></a>
+            <button class="logout">logout</button>
           </div>
 
             <!-- HEADER - NAV -->
@@ -86,6 +87,7 @@ class Header extends HTMLElement {
             <a href="../pages/about.html">ABOUT</a>
             <a href="../pages/contact.html">CONTACT</a>
           </div>
+          <script src="/script/home.js"></script>
       </header>
 
         `;

@@ -168,10 +168,7 @@ class Footer extends HTMLElement {
         </center>
         </div>
         </footer>
-            <script src="https://smtpjs.com/v3/smtp.js"></script>
         </body>
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <script src="../script/email.js"></script>
         `;
   }
 }
