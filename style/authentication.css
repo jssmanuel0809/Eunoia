@@ -1,0 +1,161 @@
+*{
+    font-family: Courier;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+body{
+    height: fit-content;
+}
+
+/* ----------HEADER---------- */
+header{
+    width: 100%
+}
+.headerlogo{
+    position: fixed;
+    background: #355C7D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 35;
+    width: 100%;
+    top: 0; left: 0; right: 0;
+    align-items: center;
+    text-align: center;
+    font-size: 100%;
+    padding: 15 0 0 0;
+    z-index: 1;
+}
+.headerlogo a{
+    color: white;
+    /* margin-left: 80px; */
+}
+.headerlogo .logo{
+    height: 30px;
+    /* margin-left: 125px; */
+}
+.headerlogo img:hover{
+    cursor: pointer;
+}
+
+/* ----------LOGIN---------- */
+.login-box,
+.register-box {
+    height: 65%;
+    width: 60%;
+    margin: 75px auto;
+    margin-top: 180px;
+    padding: 1px;
+    background: #fff;
+    /* border: 1px solid #666; */
+    /* width: 50%; */
+    /* height: 50%; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    box-shadow: 0 0 20px 12px rgba(185,190,208,30%);
+    /* position: fixed; */
+    border-radius: 15px;
+    opacity: 80%;
+}
+/* CONTENT INSIDE POPUP */
+.login-content,
+.register-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 130px;
+    /* margin-bottom: 130px; */
+    /* background: #091033; */
+    /* background-color: white; */
+    /* opacity: 90%; */
+    font-family: 'Lato', sans-serif;
+    z-index: 1;
+}
+.login-content .login_form,
+.register-content .register_form{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.login-content a,
+.register-content a{
+    text-decoration: none;
+    color: #C06C84;
+    font-size: 13px;
+}
+.login-content a:hover,
+.register-content a:hover{
+    color: #333;
+    font-weight: bold;
+}
+/* Full-width input fields */
+input[type=text], input[type=email], input[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+/* .login_form #email_error, .login_form #pass_error{
+    margin-top: 5px;
+    width: 345px;
+    font-size: 18px;
+    color: #C62828;
+    background: rgba(255,0,0,0.1);
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: 1px solid #EF9A9A;
+    display: none;
+} */
+/* SIGN IN BUTTON */
+.SIbtn {
+    width: 30%;
+    height: fit-content;
+    font-size: 17px;
+    margin: 20px auto;
+    background: #6C5B7B;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.5s;
+    text-decoration: none;
+
+}
+.SIbtn:hover {
+    color: #fff;
+    background: #C06C84;
+    cursor: pointer;
+}
+
+.alert-box{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 150px;
+    max-width: 90%;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    text-transform: capitalize;
+    background: rgb(255, 119, 119);
+    border-top: 10px solid rgb(255, 37, 37);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #fff;
+    font-family: 'roboto', sans-serif;
+    text-align: center;
+    transition: 1s;
+}
