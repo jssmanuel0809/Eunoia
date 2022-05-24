@@ -18,10 +18,6 @@ class Header extends HTMLElement {
         header{
           width: 100%
         }
-        .headerlogo #clock{
-          font-size: 10px;
-          color: black;
-        }
         .headerlogo{
           position: fixed;
           background: #355C7D;  /* fallback for old browsers */

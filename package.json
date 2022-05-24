@@ -1,0 +1,26 @@
+{
+  "name": "loginform",
+  "version": "1.0.0",
+  "description": "E-commerce website: Requirements for Applications Development & Empowerment Technologies Laboratory",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jssmanuel0809/Eunoia.git"
+  },
+  "author": "jemima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jssmanuel0809/Eunoia/issues"
+  },
+  "homepage": "https://github.com/jssmanuel0809/Eunoia#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express.js": "^1.0.0",
+    "knex": "^2.0.0",
+    "nodemon": "^2.0.16",
+    "pg": "^8.7.3"
+  }
+}
