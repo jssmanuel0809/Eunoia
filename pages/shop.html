@@ -20,6 +20,7 @@
         <header-component></header-component>
 
 
+        <a href="#popup"><h1><i class="fa fa-shopping-cart"></i></h1></a>
         <!--PRODUCT GALLERY-->
         <div class="small-container">
             <h3 id="apparels">ALL PRODUCTS</h3>
@@ -216,7 +217,42 @@
             </div>
         </div>
 
+
+          <!--cart popup-->
+        <div id="popup" class="overlay">
+            <div class="cartpopup">
+                <a class="close" href="#">&times;</a>
+                <div class="cartcontent">
+                    <h2>YOUR CART</h2>
+                </div>
+            </div>
+        </div>
+
+
             <!-- FOOTER-->
         <footer-component></footer-component>
     </body>
 </html>
+
+<script>
+    var select = document.querySelector('.select');
+    var noti = document.querySelector('h1');
+    var button = document.getElementsByTagName('button');
+  for(but of button){
+    but.addEventListener('click', (e)=>{
+      var add = Number(noti.getAttribute('data-count')|| 0);
+      noti.setAttribute('data-count', add + 1);
+      noti.classList.add('zero');
+
+      var parent = e.target.parentNode;
+      var clone = parent.cloneNode(true);
+      select.appendChild(clone);
+      clone.lastElementChild.innerText = "Buy Now";
+      if (clone){
+        noti.onclick =()=>{
+          select.classList.toggle('display');
+        }
+      }
+    })
+  }
+</script>

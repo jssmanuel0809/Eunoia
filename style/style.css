@@ -101,7 +101,26 @@ section{
     margin-top: 50px;
     margin-left: 30px;
 }
-.topbtn{
+.btn1{
+  font-family: Courier;
+  display: inline-block;
+  background: #333;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: background 0.5s;
+  text-decoration: none;
+  border: none;
+  margin-top: 10px;
+  font-size: 17px;
+}
+.btn1:hover{
+  text-decoration: none;
+  background: #6C5B7B;
+  color: white;
+  cursor: pointer;
+}
+/*.topbtn{
     display: inline-block;
     font-weight: 400;
     color: #212529;
@@ -123,7 +142,7 @@ section{
     color: #fff;
     text-decoration: none;
     background: #C06C84;
-}
+}*/
 
 /* ----------QUOTE---------- */
 .quote{
@@ -338,4 +357,5 @@ section h5{
 .carousel-indicators li.active {
   background: #9B84AC !important;
 }
+
 

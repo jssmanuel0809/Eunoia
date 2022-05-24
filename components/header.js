@@ -7,6 +7,7 @@ class Header extends HTMLElement {
       this.innerHTML = `zzzz
       <head>
         <style>
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
         *{
           font-family: Courier;
           font-size: 18px;
@@ -112,9 +113,10 @@ class Header extends HTMLElement {
           transform: translateX(24px);
         }
         
-        .clock #time{
+        .headernav #time{
           margin-bottom: 0px;
           padding-left: 50px;
+          text-decoration: none;
         }
 
         .darkmode{
@@ -124,9 +126,94 @@ class Header extends HTMLElement {
         .darkmode .headernav{
           background-color: black;
         }
+        .darkmode .headernav a:hover{
+          color: white;
+        }
         .darkmode .content{
           color: white;
         }
+        .darkmode .home .content h3{
+          color: white;
+        }
+        .darkmode .home .content p{
+          color: white;
+        }
+        .darkmode .popular-products h3{
+          color: white;
+        }
+        .darkmode .customer-review h3{
+          color: white;
+        }
+        /*.darkmode .customer-review .carousel slide .carousel-inner .carousel-item active .header-box .overview{
+          color: white;
+        }*/
+        .darkmode .row .col-1{
+          background-color: darkgray;
+        }
+        /*.darkmode .row .col-1 h4{
+          color: white;
+        }
+        .darkmode .row .col-1 p{
+          color: white;
+        }*/
+        /*background-image: url('../public/image/bg-img-dark.png');*/
+
+        /*cart popup*/
+        .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(40, 36, 36, 0.5);
+          transition: opacity 200ms;
+          visibility: hidden;
+          opacity: 0;
+      }
+      .overlay:target {
+          visibility: visible;
+          opacity: 1;
+      }
+      .cartpopup {
+        margin: 130px auto;
+        padding: 1px;
+        background: #fff;
+        width: 75%;
+        height: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cartcontent {
+      height: 100%;
+      width: 100%;
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+  }
+  .cartcontent h2{
+    margin-bottom: 400px;
+  }
+  .close {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 135px;
+    right: 145px;
+    opacity: 0.8;
+    transition: all 200ms;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+  }
+  .close:hover {
+    opacity: 1;
+  }
         </style>
       </head>
 
@@ -135,7 +222,7 @@ class Header extends HTMLElement {
           <div class="headerlogo">
             <a href="index.html"><img class="logo" src="../public/image/logotextwhite.png"></a>
             <a href="#login"><img class="righticons" src="../public/image/user.png"></a>
-            <a href=""><img class="righticons" src="../public/image/cart.png"></a>
+            <a href="#popup"><h1class="righticons"><img class="righticons" src="../public/image/cart.png"></h1></a>
           </div>
 
             <!-- HEADER - NAV -->
@@ -156,7 +243,30 @@ class Header extends HTMLElement {
             <a href="../pages/faqs.html">FAQS</a>
             <a href="../pages/about.html">ABOUT</a>
             <a href="../pages/contact.html">CONTACT</a>
+            <h6 id="time"></h6>
           </div>
+
+
+          <!--cart popup-->
+        <!-- button cart image onclick -->
+        <button class="button1"><a href=#popup>Button</a></button>
+        <!-- pop up -->
+        <div id="popup" class="overlay">
+            <div class="cartpopup">
+                <a class="close" href="#">&times;</a>
+                <div class="cartcontent">
+                    <h2>YOUR CART</h2>
+                    <!-- <label for="uname"><b>Username</b></label> -->
+                    <!--<input type="text" placeholder="Email">-->
+                    <!-- name="uname" required -->
+                    <!-- <label for="psw"><b>Password</b></label> -->
+                    <!--<input type="password" placeholder="Password">-->
+                    <!-- name="psw" required -->
+                    <!-- WALA PANG PROCESS AFTER SIGN IN -->
+                    <!--<button class="SIbtn">Sign in</button>-->
+                </div>
+            </div>
+        </div>
 
           
 
@@ -200,6 +310,54 @@ currentTime();
 
 
 function myFunction(){
-  var element = document.body;
+  let dark = true;
+  if(dark){
+    var element = document.body;
   element.classList.toggle("darkmode");
+  }
 }
+
+/*var addItemId = 0;
+function addToCart(item){
+  addItemId++;
+  var selectedItem = document.createElement("div");
+  selectedItem.classList.add("cartImg");
+  selectedItem.setAttribute("id", addItemId);
+  var img = document.createElement("img");
+  img.setAttribute('src', item.children[0].currentSrc)
+  var title = document.createElement('div');
+  title.innerText = item.children[1], innerText;
+  var label = document.createElement('div');
+  label.innerText = item.children[2].children[0].innerText;
+  var select = document.createElement('span');
+  select.innerText = item.children[2].children[1].value;
+  label.append(select);
+  var delBtn = document.createElement('button');
+  delBtn.innerText = 'Delete';
+  delBtn.setAttribute("onclick", "del("+addItemId+")");
+  var cartItems = document.getElementById("title");
+  selectedItems.append(img);
+  selectedItem.append(title);
+  selectedItem.append(label);
+  selectedItem.append(delBtn);
+  cartItems.append(selectedItem);
+}
+
+function del(item){
+  document.getElementById(item).remove();
+}
+
+/*function dark(sheet){
+  document.getElementById('theme').setAttribute('href', sheet);
+}*/
+
+/*let checkbox = document.getElementById("chkmode");
+let body = document.getElementById('body')
+
+checkbox.addEventListener( 'change', function() {
+if(this.checked) {
+    body.classList.add("darkmode")
+} else {
+    body.classList.remove("darkmode")     
+}
+});*/
