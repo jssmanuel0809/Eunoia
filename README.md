@@ -13,7 +13,3 @@ Members:
 Instructions:
 Make sure Node and NPM are installed.
 Run npm start in terminal.
-
-
-https://user-images.githubusercontent.com/88172123/170270212-7116ac72-d241-41b6-b14c-68dd408a2e55.mov
-
