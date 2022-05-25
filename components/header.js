@@ -219,9 +219,10 @@ class Header extends HTMLElement {
       <header>
             <!-- HEADER - LOGO, LOGIN, CART-->
           <div class="headerlogo">
-            <a href="index.html"><img class="logo" src="../public/image/logotextwhite.png"></a>
-            <a href="#login"><img class="righticons" src="../public/image/user.png"></a>
-            <!--<a href="#"><h1class="righticons"><i class="fa fa-shopping-cart"></i></h1></a>-->
+            <a href="../pagesindex.html"><img class="logo" src="../public/image/logotextwhite.png"></a>
+            <a href="/login" class="greeting">Hello, User<img class="righticons" src="../public/image/user.png"></a>
+            <a href=""><img class="righticons" src="../public/image/cart.png"></a>
+            <button class="logout">logout</button>
           </div>
 
             <!-- HEADER - NAV -->
@@ -244,31 +245,7 @@ class Header extends HTMLElement {
             <a href="../pages/contact.html">CONTACT</a>
             <h6 id="time"></h6>
           </div>
-
-
-          <!--cart popup-->
-        <!-- button cart image onclick -->
-        <!--<button class="button1"><a href=#popup>Button</a></button>-->
-        <!-- pop up -->
-        <!--<div id="popup" class="overlay">-->
-            <!--<div class="cartpopup">-->
-                <!--<a class="close" href="#">&times;</a>-->
-                <!--<div class="cartcontent">-->
-                    <!--<h2>YOUR CART</h2>-->
-                    <!-- <label for="uname"><b>Username</b></label> -->
-                    <!--<input type="text" placeholder="Email">-->
-                    <!-- name="uname" required -->
-                    <!-- <label for="psw"><b>Password</b></label> -->
-                    <!--<input type="password" placeholder="Password">-->
-                    <!-- name="psw" required -->
-                    <!-- WALA PANG PROCESS AFTER SIGN IN -->
-                    <!--<button class="SIbtn">Sign in</button>-->
-                <!--</div>
-            </div>
-        </div>-->
-
-          
-
+          <script src="/script/home.js"></script>
       </header>
 
         `;

@@ -1,3 +1,5 @@
+// Authentication forms
+
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -36,7 +38,7 @@ app.post('/register-user', (req, res) => {
     const { name, email, password } = req.body;
 
     if(!name.length || !email.length || !password.length){
-        res.json('fill all the fields');
+        res.json('Fill all the fields');
     }
     else{
         db("users").insert({
@@ -50,7 +52,7 @@ app.post('/register-user', (req, res) => {
         })
         .catch(err => {
             if(err.detail.includes('already exists')){
-                res.json('email already exists');
+                res.json('Email already exists');
             }
         })
     }

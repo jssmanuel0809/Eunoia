@@ -1,10 +1,12 @@
-const form = [...document.querySelector('.form').children];
+// form loading animation
 
-form.forEach((item, i) => {
-    setTimeout(() => {
-        item.style.opacity = 1;
-    }, i*100);
-})
+// const form = [...document.querySelector('.form').children];
+
+// form.forEach((item, i) => {
+//     setTimeout(() => {
+//         item.style.opacity = 1;
+//     }, i*100);
+// })
 
 window.onload = () => {
     if(sessionStorage.name){
@@ -17,10 +19,10 @@ window.onload = () => {
 const name = document.querySelector('.name') || null;
 const email = document.querySelector('.email');
 const password = document.querySelector('.password');
-const SIbtn = document.querySelector('.SIbtn');
+const submitBtn = document.querySelector('.submit-btn');
 
 if(name == null){
-    SIbtn.addEventListener('click', () => {
+    submitBtn.addEventListener('click', () => {
         fetch('/login-user', {
             method: 'post',
             headers: new Headers({'Content-Type': 'applications/json'}),
@@ -37,7 +39,7 @@ if(name == null){
     })
 }
 else {
-    SIbtn.addEventListener('click', () => {
+    submitBtn.addEventListener('click', () => {
         fetch('/register-user', {
             method: 'post',
             headers: new Headers({'Content-Type': 'application/json'}),
