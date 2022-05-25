@@ -143,13 +143,14 @@ h1{
         letter-spacing: 1px;
         color: rgb(150, 150, 150);
     }
-          
     @media (max-width: 678px){
         .review{
            margin-top: 1.5rem;
           }
+        .container2space{
+            width: 80%;
+        }
     }
-    
 
 
 .FeedbackArrow:after {
