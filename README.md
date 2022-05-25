@@ -9,3 +9,7 @@ Members:
 - Manuel, Jemima Simone
 - Tuliao, Rose Therese
 - Yara, Chloe Dionne
+
+Instructions:
+Make sure Node and NPM are installed.
+Run npm start in terminal.
