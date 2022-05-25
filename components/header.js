@@ -42,7 +42,7 @@ class Header extends HTMLElement {
         }
         .headerlogo .logo{
           height: 30px;
-          margin-left: 125px;
+          margin-left: 15%;
         }
         .headerlogo img:hover{
           cursor: pointer;
@@ -140,6 +140,9 @@ class Header extends HTMLElement {
         .darkmode .customer-review h3{
           color: white;
         }
+        .darkmode .MultiCarousel-inner .item .pad10 {
+          background-color: darkgray;
+        }
         /*.darkmode .customer-review .carousel slide .carousel-inner .carousel-item active .header-box .overview{
           color: white;
         }*/
@@ -218,7 +221,7 @@ class Header extends HTMLElement {
           <div class="headerlogo">
             <a href="index.html"><img class="logo" src="../public/image/logotextwhite.png"></a>
             <a href="#login"><img class="righticons" src="../public/image/user.png"></a>
-            <a href="#"><h1class="righticons"><img class="righticons" src="../public/image/cart.png"></h1></a>
+            <!--<a href="#"><h1class="righticons"><i class="fa fa-shopping-cart"></i></h1></a>-->
           </div>
 
             <!-- HEADER - NAV -->
@@ -233,9 +236,9 @@ class Header extends HTMLElement {
 
             <a href="../pages/index.html">HOME</a>
             <a href="../pages/shop.html">SHOP ALL</a>
-            <a href="../pages/apparel.html">APPARELS</a>
-            <a href="../pages/accessories.html">ACCESSORIES</a>
-            <a href="../pages/books.html">BOOKS</a>
+            <a href="../pages/shop.html#apparels">APPARELS</a>
+            <a href="../pages/shop.html#accessories">ACCESSORIES</a>
+            <a href="../pages/shop.html #books">BOOKS</a>
             <a href="../pages/faqs.html">FAQS</a>
             <a href="../pages/about.html">ABOUT</a>
             <a href="../pages/contact.html">CONTACT</a>
@@ -280,6 +283,7 @@ function darkMode(){
 
 }
 
+//js nung time
 function currentTime(){
   let date = new Date();
   let hours = date.getHours();
@@ -312,48 +316,3 @@ function myFunction(){
   element.classList.toggle("darkmode");
   }
 }
-
-/*var addItemId = 0;
-function addToCart(item){
-  addItemId++;
-  var selectedItem = document.createElement("div");
-  selectedItem.classList.add("cartImg");
-  selectedItem.setAttribute("id", addItemId);
-  var img = document.createElement("img");
-  img.setAttribute('src', item.children[0].currentSrc)
-  var title = document.createElement('div');
-  title.innerText = item.children[1], innerText;
-  var label = document.createElement('div');
-  label.innerText = item.children[2].children[0].innerText;
-  var select = document.createElement('span');
-  select.innerText = item.children[2].children[1].value;
-  label.append(select);
-  var delBtn = document.createElement('button');
-  delBtn.innerText = 'Delete';
-  delBtn.setAttribute("onclick", "del("+addItemId+")");
-  var cartItems = document.getElementById("title");
-  selectedItems.append(img);
-  selectedItem.append(title);
-  selectedItem.append(label);
-  selectedItem.append(delBtn);
-  cartItems.append(selectedItem);
-}
-
-function del(item){
-  document.getElementById(item).remove();
-}
-
-/*function dark(sheet){
-  document.getElementById('theme').setAttribute('href', sheet);
-}*/
-
-/*let checkbox = document.getElementById("chkmode");
-let body = document.getElementById('body')
-
-checkbox.addEventListener( 'change', function() {
-if(this.checked) {
-    body.classList.add("darkmode")
-} else {
-    body.classList.remove("darkmode")     
-}
-});*/
