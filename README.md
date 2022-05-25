@@ -12,4 +12,4 @@ Members:
 
 Instructions:
 Make sure Node and NPM are installed.
-Run npm start in terminal.
+Run " npm start " in terminal.
