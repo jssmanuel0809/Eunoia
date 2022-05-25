@@ -155,7 +155,7 @@ class Header extends HTMLElement {
         /*background-image: url('../public/image/bg-img-dark.png');*/
 
         /*cart popup*/
-        .overlay {
+        /*.overlay {
           position: absolute;
           top: 0;
           bottom: 0;
@@ -209,7 +209,7 @@ class Header extends HTMLElement {
   }
   .close:hover {
     opacity: 1;
-  }
+  }*/
         </style>
       </head>
 
@@ -218,7 +218,7 @@ class Header extends HTMLElement {
           <div class="headerlogo">
             <a href="index.html"><img class="logo" src="../public/image/logotextwhite.png"></a>
             <a href="#login"><img class="righticons" src="../public/image/user.png"></a>
-            <a href="#popup"><h1class="righticons"><img class="righticons" src="../public/image/cart.png"></h1></a>
+            <a href="#"><h1class="righticons"><img class="righticons" src="../public/image/cart.png"></h1></a>
           </div>
 
             <!-- HEADER - NAV -->
@@ -245,13 +245,13 @@ class Header extends HTMLElement {
 
           <!--cart popup-->
         <!-- button cart image onclick -->
-        <button class="button1"><a href=#popup>Button</a></button>
+        <!--<button class="button1"><a href=#popup>Button</a></button>-->
         <!-- pop up -->
-        <div id="popup" class="overlay">
-            <div class="cartpopup">
-                <a class="close" href="#">&times;</a>
-                <div class="cartcontent">
-                    <h2>YOUR CART</h2>
+        <!--<div id="popup" class="overlay">-->
+            <!--<div class="cartpopup">-->
+                <!--<a class="close" href="#">&times;</a>-->
+                <!--<div class="cartcontent">-->
+                    <!--<h2>YOUR CART</h2>-->
                     <!-- <label for="uname"><b>Username</b></label> -->
                     <!--<input type="text" placeholder="Email">-->
                     <!-- name="uname" required -->
@@ -260,9 +260,9 @@ class Header extends HTMLElement {
                     <!-- name="psw" required -->
                     <!-- WALA PANG PROCESS AFTER SIGN IN -->
                     <!--<button class="SIbtn">Sign in</button>-->
-                </div>
+                <!--</div>
             </div>
-        </div>
+        </div>-->
 
           
 

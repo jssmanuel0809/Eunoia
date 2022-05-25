@@ -97,7 +97,7 @@ section{
 h1{
   width: 3%;
   position: relative;
-  top: 80px;
+  top: 100px;
   left: 90%;
   cursor: pointer;
 }
@@ -165,3 +165,129 @@ h1.zero:before{
 .cartcontent div span{
   display: none;
 }*/
+
+/*ito yung sizing nung cart popup*/
+/*.select{
+  width: 60%;
+  height: 580px;
+  background: #222;
+  position: absolute;
+  top: -100px;
+  left: 20%;
+  transition: 0.5s;
+  overflow-y: auto;
+  margin: auto;
+}*/
+.cartcontent .display{
+  top: 10px;
+}
+.cartcontent div{
+  width: 90%;
+  height: 200px;
+  display: flex;
+  padding: 5px;
+  border: 1px solid white;
+  position: relative;
+  margin: 5px auto;
+}
+.cartcontent div img{
+  width: 50%;
+  height: 100%;
+}
+.cartcontent div p{
+  padding: 35px;
+  color: black;
+}
+.cartcontent div h6,
+.cartcontent div button{
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  color: white;
+}
+.cartcontent div button{
+  left: 60%;
+  top: 55%;
+}
+.cartcontent div span{
+  display: none;
+}
+
+
+
+/*cart popup*/
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(40, 36, 36, 0.5);
+  transition: opacity 200ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.cartpopup {
+  margin: 130px auto;
+  padding: 1px;
+  background: #fff;
+  width: 75%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartcontent {
+  height: 450px;
+  width: 550px;
+  overflow: auto;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  position: absolute;
+  top: 160px;
+  left: 15%
+}
+.cartcontent h2{
+  margin-bottom: 0px;
+}
+
+.close {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 135px;
+  right: 145px;
+  opacity: 0.8;
+  transition: all 200ms;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+.close:hover {
+  opacity: 1;
+}
+
+.calculator{
+  height: 450px;
+  width: 300px;
+  overflow: auto;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  position: absolute;
+  top: 160px;
+  left: 55%
+}
+
