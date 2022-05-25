@@ -241,6 +241,7 @@ class Header extends HTMLElement {
             <a href="../pages/shop.html#accessories">ACCESSORIES</a>
             <a href="../pages/shop.html #books">BOOKS</a>
             <a href="../pages/faqs.html">FAQS</a>
+            <a href="../pages/reviews.html">REVIEWS</a>
             <a href="../pages/about.html">ABOUT</a>
             <a href="../pages/contact.html">CONTACT</a>
             <h6 id="time"></h6>
