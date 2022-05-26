@@ -175,6 +175,22 @@ class Header extends HTMLElement {
         .darkmode .row .col-1 p{
           color: white;
         }*/
+        .shopDropdown {
+          position: relative;
+          display: inline-block;
+        }
+        .shopDropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          padding: 12px 16px;
+          z-index: 1;
+        }
+        .shopDropdown:hover .shopDropdown-content {
+          display: block;
+        }
         </style>
       </head>
 
@@ -199,10 +215,14 @@ class Header extends HTMLElement {
           </div>
 
             <a href="../pages/index.html">HOME</a>
-            <a href="../pages/shop.html">SHOP ALL</a>
-            <a href="#apparels">APPARELS</a>
-            <a href="#accessories">ACCESSORIES</a>
-            <a href="#books">BOOKS</a>
+            <div class="shopDropdown">
+              <span><a href="../pages/shop.html">SHOP ALL</a></span>
+              <div class="shopDropdown-content">
+                <a href="../pages/shop.html#apparels">APPARELS</a>
+                <a href="../pages/shop.html#accessories">ACCESSORIES</a>
+                <a href="../pages/shop.html#books">BOOKS</a>
+              </div>
+            </div>
             <a href="../pages/faqs.html">FAQS</a>
             <a href="../pages/reviews.html">REVIEWS</a>
             <a href="../pages/about.html">ABOUT</a>
