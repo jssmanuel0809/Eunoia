@@ -13,26 +13,24 @@
     </head>
 
     <body background = "../public/image/bg-image.png">
+        <div class="authentication">
+            <div class="headerlogo">
+                <a href="../pages/index.html"><img class="logo" src="../public/image/logotextwhite.png"></a>
+            </div>
 
-        <div class="headerlogo">
-            <a href="../pages/index.html"><img class="logo" src="../public/image/logotextwhite.png"></a>
-        </div>
 
-        <div class="login-box">
-            <div class="login-content form">
-                <div class="alert-box">
-                    <p class="alert"></p>
-                </div>
-                <h2>SIGN IN TO YOUR <br>ACCOUNT</h2>
-                <form class="login_form form">
-                    <input autocomplete="off" type="email" placeholder="Email" class="email" required>
-                    <input type="password" placeholder="Password" class="password" required>
-                    <button type="submit" class="submit-btn">Sign in</button>
-                    <!-- <a href="../authentication/register.html">Create an account</a> -->
-                    <a href="/register" class="link">Create an account</a>
-                </form>
+            <div class="alert-box">
+                <p class="alert"></p>
+            </div>
+
+            <div class="form">
+                <h1 class="heading">login</h1>
+                <input type="email" placeholder="email" autocomplete="off" class="email" required>
+                <input type="password" placeholder="password" autocomplete="off" class="password" required>
+                <button class="submit-btn">log in</button>
+                <a href="/register" class="link">don't have an account? Register one</a>
             </div>
         </div>
     </body>
-    <script src="../script/authentication.js" type="module"></script>
+    <script src="../script/authentication.js"></script>
 </html>

@@ -1,5 +1,3 @@
-// Authentication forms
-
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -17,30 +15,29 @@ const db = knex({
 
 const app = express();
 
-let initialPath = path.join(__dirname);
+let intialPath = path.join(__dirname);
 
 app.use(bodyParser.json());
-app.use(express.static(initialPath));
+app.use(express.static(intialPath));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(initialPath, "/pages/index.html"));
+    res.sendFile(path.join(intialPath, "pages/index.html"));
 })
 
 app.get('/login', (req, res) => {
-    res.sendFile(path.join(initialPath, "/pages/login.html"));
+    res.sendFile(path.join(intialPath, "pages/login.html"));
 })
 
 app.get('/register', (req, res) => {
-    res.sendFile(path.join(initialPath, "/pages/register.html"));
+    res.sendFile(path.join(intialPath, "pages/register.html"));
 })
 
 app.post('/register-user', (req, res) => {
     const { name, email, password } = req.body;
 
     if(!name.length || !email.length || !password.length){
-        res.json('Fill all the fields');
-    }
-    else{
+        res.json('fill all the fields');
+    } else{
         db("users").insert({
             name: name,
             email: email,
@@ -52,14 +49,14 @@ app.post('/register-user', (req, res) => {
         })
         .catch(err => {
             if(err.detail.includes('already exists')){
-                res.json('Email already exists');
+                res.json('email already exists');
             }
         })
     }
 })
 
 app.post('/login-user', (req, res) => {
-    const {email, password} = req.body;
+    const { email, password } = req.body;
 
     db.select('name', 'email')
     .from('users')
@@ -70,8 +67,7 @@ app.post('/login-user', (req, res) => {
     .then(data => {
         if(data.length){
             res.json(data[0]);
-        }
-        else{
+        } else{
             res.json('email or password is incorrect');
         }
     })

@@ -4,10 +4,9 @@ class Header extends HTMLElement {
     }
   
     connectedCallback() {
-      this.innerHTML = `zzzz
+      this.innerHTML = `
       <head>
         <style>
-        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
         *{
           font-family: Courier;
           font-size: 18px;
@@ -15,10 +14,55 @@ class Header extends HTMLElement {
           border: none;
           text-decoration: none;
         }
+        :root {
+          --clr-light: #faf9f8;
+          --clr-dark: #201f1e;
+          --foreground: var(--clr-dark);
+          --background: var(--clr-light);
+        }
+        .darkmode {
+          --clr-light: #faf9f8;
+          --clr-dark: #201f1e;
+          --foreground: var(--clr-light);
+          --background: var(--clr-dark);
+        }
+        body {
+          height: 100%;
+          background: var(--background);
+          color: var(--foreground);
+        }
         header{
           width: 100%
         }
+        .headerlogo .greeting{
+          font-size: 15px;
+          color: white;
+          padding-right: 10px;
+        }
+        .logout{
+          color: white;
+          transition: background 0.5s;
+          text-decoration: none;
+          border: none;
+          font-size: 15px;
+          background: transparent;
+          padding-right: 10px;
+          margin-bottom: 25;
+        }
+        .logout:hover{
+          text-decoration: none;
+          cursor: pointer;
+          font-weight: bold;
+        }
+
+        .headerlogo .user{
+          display: flex;
+          margin-right: 50px;
+        }
         .headerlogo{
+          display: flex;
+          justify-content: space-around;
+          align-items: flex-start;
           position: fixed;
           background: #355C7D;  /* fallback for old browsers */
           background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
@@ -31,18 +75,9 @@ class Header extends HTMLElement {
           padding: 15 0 0 0;
           z-index: 2;
         }
-        .headerlogo a{
-          color: white;
-          margin-left: 80px;
-        }
-        .righticons{
-          height:20px;
-          float: right;
-          margin-right: 30px;
-        }
         .headerlogo .logo{
           height: 30px;
-          margin-left: 15%;
+          margin-right: 500px;
         }
         .headerlogo img:hover{
           cursor: pointer;
@@ -50,218 +85,193 @@ class Header extends HTMLElement {
         .headernav{
           position: fixed;
           top: 50; left: 0; right: 0;
-          background: #fff;
+          background: var(--background);
+          color: var(--foreground);
           padding: 10px 10%;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          box-shadow: 0 .6rem 1rem rgba(0, 0, 0, .1);
           z-index: 2;
         }
         .headernav a{
           color: gray;
         }
         .headernav a:hover{
-          color: black;
+          color: var(--foreground);
           text-decoration-line: none;
         }
 
-        <!--dark mode css-->
-        body.dark {
-          background-color: gray;
-          color: white;
-        }
-        .checkboxmode {
-          opacity: 0;
-          position: absolute;
-        }
-        /* edit mo nalang to depende kung san mo ilalagay/position yung toggle */
-        .labelmode {
-          background-color: gray;
-          border-radius: 50px;
-          cursor: pointer;
+        .nav-regions{
+          position: fixed;
+          top: 90; 
+          left: 0; 
+          right: 0;
+          background: var(--background);
+          color: var(--foreground);
+          padding: 5px 10%;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 5px;
+          box-shadow: 7px 13px 1rem rgba(0, 0, 0, .1);
+          z-index: 1;
+        }
+        .nav-regions a{
+          color: gray;
+        }
+        .nav-regions a:hover{
+          color: var(--foreground);
+          text-decoration-line: none;
+        }
+        
+        .shopDropdown {
           position: relative;
-          height: 20px;
-          width: 44px;
-          transform: scale(1.3);
-          margin-right: 45px;
-          margin-top: 5px;
-        }
-        /* ito yung gumagalaw na circle pag nagttoggle ganon */
-        .labelmode .ballmode {
-            /* palitan mo nalang color if di bagay white para dun sa circle */
-          background-color: #fff;
-          border-radius: 50%;
+          display: inline-block;
+        }     
+        .shopDropdown-content {
+          display: none;
           position: absolute;
-          top: 2px;
-          left: 2px;
-          height: 16px;
-          width: 16px;
-          transform: translateX(0px);
-          transition: transform 0.2s linear;
+          min-width: 130px;
+          z-index: 100;
+          justify-items: center;
+          background: var(--background);
+          color: var(--foreground);
         }
-        
-        .checkboxmode:checked + .labelmode .ballmode {
-          transform: translateX(24px);
+        .shopDropdown:hover .shopDropdown-content {
+          display: block;
         }
-        
+
         .headernav #time{
           margin-bottom: 0px;
           padding-left: 50px;
           text-decoration: none;
+          color: gray;
         }
 
-        .darkmode{
-          background-color: gray;
-          color: white;
+        .dark-mode-toggle {
+          position: fixed;
+          z-index: 100;
+          left: 40px;
+          color: gray;
+          border: 2px solid currentColor;
+          padding: 4px;
+          background: transparent;
+          cursor: pointer;
+          border-radius: 5px;
+          width: 30px;
+          height: 30px;
         }
-        .darkmode .headernav{
-          background-color: black;
-        }
-        .darkmode .headernav a:hover{
-          color: white;
-        }
-        .darkmode .content{
-          color: white;
-        }
-        .darkmode .home .content h3{
-          color: white;
-        }
-        .darkmode .home .content p{
-          color: white;
-        }
-        .darkmode .popular-products h3{
-          color: white;
-        }
-        .darkmode .customer-review h3{
-          color: white;
-        }
-        .darkmode .MultiCarousel-inner .item .pad10 {
-          background-color: darkgray;
-        }
-        /*.darkmode .customer-review .carousel slide .carousel-inner .carousel-item active .header-box .overview{
-          color: white;
-        }*/
-        .darkmode .row .col-1{
-          background-color: darkgray;
-        }
-        /*.darkmode .row .col-1 h4{
-          color: white;
-        }
-        .darkmode .row .col-1 p{
-          color: white;
-        }*/
-        /*background-image: url('../public/image/bg-img-dark.png');*/
-
-        /*cart popup*/
-        /*.overlay {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background: rgba(40, 36, 36, 0.5);
-          transition: opacity 200ms;
-          visibility: hidden;
-          opacity: 0;
-      }
-      .overlay:target {
-          visibility: visible;
-          opacity: 1;
-      }
-      .cartpopup {
-        margin: 130px auto;
-        padding: 1px;
-        background: #fff;
-        width: 75%;
-        height: 75%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .cartcontent {
-      height: 100%;
-      width: 100%;
-      overflow: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      font-family: 'Lato', sans-serif;
-  }
-  .cartcontent h2{
-    margin-bottom: 400px;
-  }
-  .close {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 135px;
-    right: 145px;
-    opacity: 0.8;
-    transition: all 200ms;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-  }
-  .close:hover {
-    opacity: 1;
-  }*/
         </style>
       </head>
 
       <header>
             <!-- HEADER - LOGO, LOGIN, CART-->
           <div class="headerlogo">
-            <a href="../pagesindex.html"><img class="logo" src="../public/image/logotextwhite.png"></a>
-            <a href="/login" class="greeting">Hello, User<img class="righticons" src="../public/image/user.png"></a>
-            <a href=""><img class="righticons" src="../public/image/cart.png"></a>
-            <button class="logout">logout</button>
+            <img class="logo" src="../public/image/logotextwhite.png"></a>
+            <div class="user">
+              <p class="greeting"></p>
+              <button class="logout">logout</button>
+            </div>
           </div>
 
-            <!-- HEADER - NAV -->
-          <div class="headernav">
+
+          <!-- HEADER - NAV -->
+
+        <div class="headernav">
           <!--dark mode-->
-          <div>
-            <input type="checkbox" onclick="myFunction()" class="checkboxmode" id="chkmode" />
-            <label class="labelmode" for="chkmode">
-                <div class="ballmode"></div>
-            </label>
-          </div>
-
+            <button id="dark-mode-toggle" class="dark-mode-toggle">
+              <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496"><path fill="currentColor" d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z" transform="translate(-8 -8)"/></svg>
+            </button>
             <a href="../pages/index.html">HOME</a>
-            <a href="../pages/shop.html">SHOP ALL</a>
-            <a href="../pages/shop.html#apparels">APPARELS</a>
-            <a href="../pages/shop.html#accessories">ACCESSORIES</a>
-            <a href="../pages/shop.html #books">BOOKS</a>
+            <div class="shopDropdown">
+              <span><a href="../pages/shop.html">SHOP ALL</a></span>
+              <div class="shopDropdown-content">
+                <a href="../pages/shop.html#apparels">APPARELS</a>
+                <a href="../pages/shop.html#accessories">ACCESSORIES</a>
+                <a href="../pages/shop.html#books">BOOKS</a>
+              </div>
+            </div>
             <a href="../pages/faqs.html">FAQS</a>
             <a href="../pages/reviews.html">REVIEWS</a>
             <a href="../pages/about.html">ABOUT</a>
             <a href="../pages/contact.html">CONTACT</a>
             <h6 id="time"></h6>
-          </div>
-          <script src="/script/home.js"></script>
-      </header>
+        </div>
 
-        `;
+          <!-- HEADER - NAV REGIONS -->
+        <div class="nav-regions">
+            <div class="shopDropdown">
+              <span><a href="../pages/shopAsia.html">Asia</a></span>
+              <div class="shopDropdown-content">
+                <a href="../pages/shopAsia.html#apparelsAsia">APPARELS</a>
+                <a href="../pages/shopAsia.html#accessoriesAsia">ACCESSORIES</a>
+                <a href="../pages/shopAsia.html#booksAsia">BOOKS</a>
+              </div>
+            </div>
+            <div class="shopDropdown">
+              <span><a href="../pages/shopEurope.html">Europe</a></span>
+              <div class="shopDropdown-content">
+                <a href="../pages/shopAsia.html#apparelsEurope">APPARELS</a>
+                <a href="../pages/shopAsia.html#accessoriesEurope">ACCESSORIES</a>
+                <a href="../pages/shopAsia.html#booksEurope">BOOKS</a>
+              </div>
+            </div>
+            <div class="shopDropdown">
+              <span><a href="../pages/shopAmerica.html">America</a></span>
+              <div class="shopDropdown-content">
+                <a href="../pages/shopAsia.html#apparelsAmerica">APPARELS</a>
+                <a href="../pages/shopAsia.html#accessoriesAmerica">ACCESSORIES</a>
+                <a href="../pages/shopAsia.html#booksAmerica">BOOKS</a>
+              </div>
+            </div>
+            <div class="shopDropdown">
+              <span><a href="../pages/shopAustralia.html">Australia</a></span>
+              <div class="shopDropdown-content">
+                <a href="../pages/shopAsia.html#apparelsAustralia">APPARELS</a>
+                <a href="../pages/shopAsia.html#accessoriesAustralia">ACCESSORIES</a>
+                <a href="../pages/shopAsia.html#booksAustralia">BOOKS</a>
+              </div>
+            </div>
+            <div class="shopDropdown">
+              <span><a href="../pages/shopAfrica.html">Africa</a></span>
+              <div class="shopDropdown-content">
+                <a href="../pages/shopAsia.html#apparelsAfrica">APPARELS</a>
+                <a href="../pages/shopAsia.html#accessoriesAfrica">ACCESSORIES</a>
+                <a href="../pages/shopAsia.html#booksAfrica">BOOKS</a>
+              </div>
+            </div>
+        </div>
+      </header>
+        `
+        ;
   }
 }
 
 customElements.define('header-component', Header);
-function darkMode(){
-  document.body.style.backgroundColor="gray";
-  const headernav = document.getElementsByClassName("headernav");
-  headernav[0].style.background="black";
 
+//darkmode
+let darkMode = localStorage.getItem('darkMode'); 
+const darkModeToggle = document.querySelector('#dark-mode-toggle');
+const enableDarkMode = () => {
+  document.body.classList.add('darkmode');
+  localStorage.setItem('darkMode', 'enabled');
 }
+const disableDarkMode = () => {
+  document.body.classList.remove('darkmode');
+  localStorage.setItem('darkMode', null);
+}
+if (darkMode === 'enabled') {
+  enableDarkMode();
+}
+darkModeToggle.addEventListener('click', () => {
+  darkMode = localStorage.getItem('darkMode'); 
+  if (darkMode !== 'enabled') {
+    enableDarkMode();
+  } else {  
+    disableDarkMode(); 
+  }
+});
 
-//js nung time
+//time
 function currentTime(){
   let date = new Date();
   let hours = date.getHours();
@@ -282,15 +292,22 @@ function currentTime(){
 
   document.getElementById("time").innerHTML = time;
   setTimeout(function(){currentTime() }, 1000);
-  console.log(time);
 }
 currentTime();
 
 
-function myFunction(){
-  let dark = true;
-  if(dark){
-    var element = document.body;
-  element.classList.toggle("darkmode");
-  }
-}
+//login
+// const greeting = document.querySelector('.greeting');
+// window.onload = () => {
+//     if(!sessionStorage.name){
+//         location.href = '/login';
+//     }
+//     else{
+//         greeting.innerHTML = sessionStorage.name;
+//     }
+// }
+// const logOut = document.querySelector('.logout');
+// logOut.onclick = () => {
+//     sessionStorage.clear();
+//     location.reload();
+// }

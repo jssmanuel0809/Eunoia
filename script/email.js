@@ -7,7 +7,7 @@ function sendEmail(){
         To : 'developmentpurp@gmail.com',
         From : document.getElementById("email").value,
         Subject : "EUNOIA - Contact Form Inquiry",
-        Body : "And this is the body"
+        Body : document.getElementById("message").value
     }).then(
       message => alert(message)
     );

@@ -14,25 +14,22 @@
     </head>
 
     <body background = "../public/image/bg-image.png">
+        <div class="authentication">
+            <div class="headerlogo">
+                <a href="../pages/index.html"><img class="logo" src="../public/image/logotextwhite.png"></a>
+            </div>
 
-        <div class="headerlogo">
-            <a href="../pages/index.html"><img class="logo" src="../public/image/logotextwhite.png"></a>
-        </div>
-
-        <div class="register-box">
-            <div class="register-content form">
-                <div class="alert-box">
-                    <p class="alert"></p>
-                </div>
-                <h2>CREATE AN ACCOUNT</h2>
-                <form class="register_form form">
-                    <input autocomplete="off" type="text" placeholder="Name" class="name" required>
-                    <input autocomplete="off" type="email" placeholder="Email" class="email" required>
-                    <input autocomplete="off" type="password" placeholder="Password" class="password" required>
-                    <button class="submit-btn">Register</button>
-                    <!-- <a href="../authentication/login.html">Sign in with existing account</a> -->
-                    <a href="/login" class="link">Sign in with existing account</a>
-                </form>
+            <div class="alert-box">
+                <p class="alert"></p>
+            </div>
+        
+            <div class="form">
+                <h1 class="heading">Register</h1>
+                <input type="text" placeholder="name" autocomplete="off" class="name" required>
+                <input type="email" placeholder="email" autocomplete="off" class="email" required>
+                <input type="password" placeholder="password" autocomplete="off" class="password" required>
+                <button class="submit-btn">register</button>
+                <a href="/login" class="link">already have an account ? log in here</a>
             </div>
         </div>
     </body>
