@@ -11,6 +11,7 @@
 }
 
 body{
+    height: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,17 +20,18 @@ body{
     outline: none;
     border: none;
 }
-
-.contact-box{
-    margin: 75px auto;
-    margin-top: 100px;
-    padding: 1px;
+.contact{
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 150px;
+    text-align: justify;
+    height: 71.25vh;
 }
+
 .contact-box .contact-content h2{
-    font-family: Courier;
-    font-size: 50px;
+    font-size: 70px;
     padding-bottom: 20px;
-  color: var(--foreground);
+    color: var(--foreground);
 }
 
 /* CONTENT INSIDE POPUP */
@@ -97,12 +99,20 @@ textarea{
   body{
       position: relative;
   }
+  .contact{
+      height: 71.25vh;
+      padding-left: 30px;
+      padding-right: 30px;
+  }
   .contact-box .contact-content{
       flex-wrap: wrap;
       flex-direction: column;
       margin: 5px 0;
       margin-top: 130px;
   }
+  .contact-box .contact-content h2{
+    font-size: 50px;
+    }
   input[type=email]{
     width: 80%;
     padding: 12px 20px;

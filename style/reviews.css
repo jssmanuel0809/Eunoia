@@ -23,14 +23,14 @@ body{
     text-align: center;
 }
 .title{
-    font-size: 2.5rem;
-    text-transform: uppercase;
+    font-size: 70px;
+    padding-top: 31px;
+    padding-bottom: 20px;
     color: var(--foreground);
-    margin-bottom: .5rem;
-    margin-top: .5rem;
 }
 .subheader{
     color: rgb(255, 161, 161);
+    font-size: 24px;
 }       
 .ReviewSection{
     margin: 2rem auto;
@@ -86,6 +86,13 @@ body{
     color: var(--foreground);
 }
 @media (max-width: 678px){
+    .title{
+        font-size: 50px;
+    }
+    .subheader{
+        color: rgb(255, 161, 161);
+        font-size: 20px;
+    } 
     .review{
         margin-top: 1.5rem;
         }
@@ -97,6 +104,7 @@ body{
 .review-header{
     text-align: center;
     color: rgb(255, 161, 161);
+    font-size: 24px;
 } 
 textarea {
     width: 100%;
@@ -169,6 +177,9 @@ input[type=submit]:hover{
     flex-direction: column;
  }
  @media (max-width: 800vh){
+    .review-header{
+        font-size: 20px;
+    } 
     .container2space{
         width: 80%;
     }

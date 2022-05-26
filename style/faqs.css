@@ -9,8 +9,8 @@
   text-decoration: none;
   transition: .2s linear;
 }
-html{
-  font-size: 10px;
+body{
+  /* font-size: 10px; */
   box-sizing: border-box;
 }
 *,
@@ -21,19 +21,13 @@ html{
   box-sizing: inherit;
 }
 .FAQS-Title h1{
+  font-size: 70px;
   color: var(--foreground);
-  font-size: 90px;
-  padding: 1rem;
-  text-align: center;
-  font-size: 5rem;
-  height: 50px;
-  position: inherit;
 }
-
-.header h4{
+.header{
+  font-size: 38px;
+  padding-bottom: 10px;
   color: var(--foreground);
-  font-size: 50px;
-  padding: 1rem;
   text-align: center;
 }
 
@@ -52,40 +46,25 @@ section{
   padding-bottom: 100px;
 }
 
-.FAQS-Title{
-  padding-bottom: 50px;
-}
-
-
  .column2{
   display: flex;
   flex-direction: row;
 }
 
-h5{
-  color: #000000;
-  padding: 2rem;
-  font-size: 1.4rem;
-  font-family: Monaco;
-  text-align: justify;
-}
-
-
 .container {
   width: 100%;
-  max-width: 600px;
+  max-width: 900px;
   margin: 50px auto;
 }
  
 button.accordionBar {
   width: 100%;
-  font-size: 18px;
+  font-size: 20px;
   padding: 13px 18px;
   margin-bottom: 2px;
   border: none;
   outline: none;
   text-align: left;
-  font-family: Copperplate Gothic Light;
   background-color: #d9a7c7;
   color: #333;
   transition: background-color 0.2s linear;
@@ -117,8 +96,43 @@ button.accordionBar:hover, button.accordionBar.is-open {
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
 }
+.accordionBar-content h5{
+  color: #000000;
+  padding: 3rem;
+  font-weight: normal;
+  font-size: 18px;
+  text-align: justify;
+}
 
-
+@media screen and (max-width: 1100px) {
+  body{
+      position: relative;
+  }
+  .FAQS-Title h1{
+    font-size: 50px;
+    text-align: center;
+  }
+  .header{
+    font-size: 30px;
+  }
+  .container {
+    align-items: center;
+    width: 80%;
+    padding: 13px 18px;
+  }
+  button.accordionBar {
+    font-size: 16px;
+    padding: 13px 18px;
+    margin-bottom: 2px;
+  }
+  button.accordionBar:after {
+    font-size: 10px;
+  }
+  .accordionBar-content h5{
+    padding: 1rem;
+    font-size: 14px;
+  }
+}
 
 
 

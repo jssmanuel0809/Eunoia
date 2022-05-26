@@ -11,24 +11,29 @@
 
         <!-- components -->
         <script src="../components/header.js" type="text/javascript" defer></script>
+        <script src="../components/footer.js" type="text/javascript" defer></script>
 
     </head>
     <body background = "../public/image/bg-image.png">
 
             <!-- HEADER -->
         <header-component></header-component>
-
-        <div class="contact-box">
-            <div class="contact-content form">
-                <h2>Contact us</h2>
-                <form onsubmit="sendEmail(); reset(); return false;">
-                    <input type="email" id="email" placeholder="Email" required>
-                    <textarea id="message" rows="6" cols="25" placeholder="Message"  required></textarea>
-                    <button type="submit" class="SENDbtn">Send</button>
-                </form>
+        <div class="contact">
+            <div class="contact-box">
+                <div class="contact-content form">
+                    <h2>Contact us</h2>
+                    <form onsubmit="sendEmail(); reset(); return false;">
+                        <input type="email" id="email" placeholder="Email" required>
+                        <textarea id="message" rows="6" cols="25" placeholder="Message"  required></textarea>
+                        <button type="submit" class="SENDbtn">Send</button>
+                    </form>
+                </div>
             </div>
         </div>
         
+            <!-- FOOTER-->
+            <footer-component></footer-component>
+
         <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script src="../script/email.js"></script>
     
