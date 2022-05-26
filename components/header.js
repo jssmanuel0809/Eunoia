@@ -4,10 +4,9 @@ class Header extends HTMLElement {
     }
   
     connectedCallback() {
-      this.innerHTML = `zzzz
+      this.innerHTML = `
       <head>
         <style>
-        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
         *{
           font-family: Courier;
           font-size: 18px;
@@ -19,7 +18,37 @@ class Header extends HTMLElement {
           width: 100%
         }
 
+        .headerlogo .greeting{
+          font-size: 15px;
+          color: white;
+          padding-right: 10px;
+        }
+        .logout{
+          color: white;
+          transition: background 0.5s;
+          text-decoration: none;
+          border: none;
+          font-size: 15px;
+          background: transparent;
+          padding-right: 10px;
+          margin-bottom: 25;
+        }
+        .logout:hover{
+          text-decoration: none;
+          cursor: pointer;
+          color: #355C7D;
+        }
+        .headerlogo .user{
+          display: flex;
+          /* right: 20%; */
+          /* margin-left: 100; */
+          margin-right: 50px;
+        }
+
         .headerlogo{
+          display: flex;
+          justify-content: space-around;
+          align-items: flex-start;
           position: fixed;
           background: #355C7D;  /* fallback for old browsers */
           background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
@@ -34,12 +63,8 @@ class Header extends HTMLElement {
         }
         .headerlogo a{
           color: white;
-          margin-left: 80px;
-        }
-        .righticons{
-          height:20px;
-          float: right;
-          margin-right: 30px;
+          margin-left: 0%;
+          margin-right: 50%;
         }
         .headerlogo .logo{
           height: 30px;
@@ -66,6 +91,7 @@ class Header extends HTMLElement {
           color: black;
           text-decoration-line: none;
         }
+
 
 
         header2{
@@ -133,14 +159,9 @@ class Header extends HTMLElement {
         }
       
 
-
-
-
-
-
-
-
         <!--dark mode css-->
+
+        /* dark mode css */
         body.dark {
           background-color: gray;
           color: white;
@@ -178,17 +199,14 @@ class Header extends HTMLElement {
           transform: translateX(0px);
           transition: transform 0.2s linear;
         }
-        
         .checkboxmode:checked + .labelmode .ballmode {
           transform: translateX(24px);
         }
-        
         .headernav #time{
           margin-bottom: 0px;
           padding-left: 50px;
           text-decoration: none;
         }
-
         .darkmode{
           background-color: gray;
           color: white;
@@ -239,10 +257,12 @@ class Header extends HTMLElement {
         .darkmode .row .col-1 p{
           color: white;
         }*/
-        /*background-image: url('../public/image/bg-img-dark.png');*/
-
-        /*cart popup*/
-        /*.overlay {
+        .shopDropdown {
+          position: relative;
+          display: inline-block;
+        }
+        .shopDropdown-content {
+          display: none;
           position: absolute;
           top: 0;
           bottom: 0;
@@ -299,16 +319,27 @@ class Header extends HTMLElement {
   }*/
 
 
+
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          padding: 12px 16px;
+          z-index: 1;
+        }
+        .shopDropdown:hover .shopDropdown-content {
+          display: block;
+        }
         </style>
       </head>
 
       <header>
             <!-- HEADER - LOGO, LOGIN, CART-->
           <div class="headerlogo">
-            <a href="../pagesindex.html"><img class="logo" src="../public/image/logotextwhite.png"></a>
-            <a href="/login" class="greeting">Hello, User<img class="righticons" src="../public/image/user.png"></a>
-            <a href=""><img class="righticons" src="../public/image/cart.png"></a>
-            <button class="logout">logout</button>
+            <a href="../pages/index.html"><img class="logo" src="../public/image/logotextwhite.png"></a>
+            <div class="user">
+              <p class="greeting"></p>
+              <button class="logout">logout</button>
+            </div>
           </div>
 
 
@@ -326,12 +357,20 @@ class Header extends HTMLElement {
             <a href="../pages/index.html">HOME</a>
             <a href="../pages/shop.html">SHOP ALL</a>
             <a href="../pages/newFaqs.html">FAQS</a>
+            <div class="shopDropdown">
+              <span><a href="../pages/shop.html">SHOP ALL</a></span>
+              <div class="shopDropdown-content">
+                <a href="../pages/shop.html#apparels">APPARELS</a>
+                <a href="../pages/shop.html#accessories">ACCESSORIES</a>
+                <a href="../pages/shop.html#books">BOOKS</a>
+              </div>
+            </div>
+            <a href="../pages/faqs.html">FAQS</a>
             <a href="../pages/reviews.html">REVIEWS</a>
             <a href="../pages/about.html">ABOUT</a>
             <a href="../pages/contact.html">CONTACT</a>
             <h6 id="time"></h6>
           </div>
-          <script src="/script/home.js"></script>
       </header>
 
 
@@ -431,10 +470,14 @@ class Header extends HTMLElement {
      
 
         `;
+        `
+        ;
   }
 }
 
 customElements.define('header-component', Header);
+
+//darkmode
 function darkMode(){
   document.body.style.backgroundColor="gray";
   const headernav = document.getElementsByClassName("headernav");
@@ -442,7 +485,7 @@ function darkMode(){
 
 }
 
-//js nung time
+//time
 function currentTime(){
   let date = new Date();
   let hours = date.getHours();
@@ -463,7 +506,6 @@ function currentTime(){
 
   document.getElementById("time").innerHTML = time;
   setTimeout(function(){currentTime() }, 1000);
-  console.log(time);
 }
 currentTime();
 
@@ -475,3 +517,23 @@ function myFunction(){
   element.classList.toggle("darkmode");
   }
 }
+
+
+//login
+// const greeting = document.querySelector('.greeting');
+
+// window.onload = () => {
+//     if(!sessionStorage.name){
+//         location.href = '/login';
+//     }
+//     else{
+//         greeting.innerHTML = sessionStorage.name;
+//     }
+// }
+
+// const logOut = document.querySelector('.logout');
+
+// logOut.onclick = () => {
+//     sessionStorage.clear();
+//     location.reload();
+// 

@@ -16,18 +16,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size:auto;
+    background-size: cover;
     background-position: center;
     font-family: 'roboto', sans-serif;
 }
-.authentication{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.headerlogo a{
-    margin: 20px;
-}
+
 .form{
     width: 400px;
     height: auto;
@@ -42,7 +35,6 @@ body{
     font-size: 80px;
     font-weight: 300;
     margin-bottom: 50px;
-    font-family: auto;
 }
 
 input,
@@ -115,30 +107,4 @@ input:focus::placeholder{
     font-family: 'roboto', sans-serif;
     text-align: center;
     transition: 1s;
-}
-
-@media screen and (max-width: 1000px) {
-    body{
-        position: relative;
-    }
-    .authentication{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-    }
-    .headerlogo img{
-        height: 100px;
-    }
-    .heading{
-        font-size: 40px;
-        margin-top: 40px;
-        margin-bottom: 30px;
-    }
-    .form{
-        width: 300px;
-        height: auto;
-        color: #fff;
-        font-family: 'roboto', sans-serif;
-    }
 }
