@@ -210,33 +210,33 @@ class Header extends HTMLElement {
             <div class="shopDropdown">
               <span><a href="../pages/shopEurope.html">Europe</a></span>
               <div class="shopDropdown-content">
-                <a href="../pages/shopAsia.html#apparelsEurope">APPARELS</a>
-                <a href="../pages/shopAsia.html#accessoriesEurope">ACCESSORIES</a>
-                <a href="../pages/shopAsia.html#booksEurope">BOOKS</a>
+                <a href="../pages/shopEurope.html#apparelsEurope">APPARELS</a>
+                <a href="../pages/shopEurope.html#accessoriesEurope">ACCESSORIES</a>
+                <a href="../pages/shopEurope.html#booksEurope">BOOKS</a>
               </div>
             </div>
             <div class="shopDropdown">
               <span><a href="../pages/shopAmerica.html">America</a></span>
               <div class="shopDropdown-content">
-                <a href="../pages/shopAsia.html#apparelsAmerica">APPARELS</a>
-                <a href="../pages/shopAsia.html#accessoriesAmerica">ACCESSORIES</a>
-                <a href="../pages/shopAsia.html#booksAmerica">BOOKS</a>
+                <a href="../pages/shopAmerica.html#apparelsAmerica">APPARELS</a>
+                <a href="../pages/shopAmerica.html#accessoriesAmerica">ACCESSORIES</a>
+                <a href="../pages/shopAmerica.html#booksAmerica">BOOKS</a>
               </div>
             </div>
             <div class="shopDropdown">
               <span><a href="../pages/shopAustralia.html">Australia</a></span>
               <div class="shopDropdown-content">
-                <a href="../pages/shopAsia.html#apparelsAustralia">APPARELS</a>
-                <a href="../pages/shopAsia.html#accessoriesAustralia">ACCESSORIES</a>
-                <a href="../pages/shopAsia.html#booksAustralia">BOOKS</a>
+                <a href="../pages/shopAustralia.html#apparelsAustralia">APPARELS</a>
+                <a href="../pages/shopAustralia.html#accessoriesAustralia">ACCESSORIES</a>
+                <a href="../pages/shopAustralia.html#booksAustralia">BOOKS</a>
               </div>
             </div>
             <div class="shopDropdown">
               <span><a href="../pages/shopAfrica.html">Africa</a></span>
               <div class="shopDropdown-content">
-                <a href="../pages/shopAsia.html#apparelsAfrica">APPARELS</a>
-                <a href="../pages/shopAsia.html#accessoriesAfrica">ACCESSORIES</a>
-                <a href="../pages/shopAsia.html#booksAfrica">BOOKS</a>
+                <a href="../pages/shopAfrica.html#apparelsAfrica">APPARELS</a>
+                <a href="../pages/shopAfrica.html#accessoriesAfrica">ACCESSORIES</a>
+                <a href="../pages/shopAfrica.html#booksAfrica">BOOKS</a>
               </div>
             </div>
         </div>
