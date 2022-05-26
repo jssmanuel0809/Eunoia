@@ -94,7 +94,6 @@ section{
 }
 
 
-<<<<<<< Updated upstream
 
 h1{
   width: 3%;
@@ -282,7 +281,7 @@ h1.zero:before{
   color: white;
   cursor: pointer;
 }
-=======
+
 ol {
   list-style: none;
 }
@@ -316,5 +315,24 @@ a {
   color: var(--white);
 }
 
+.filterDiv {
+  float: left;
+  background-color: #2196F3;
+  color: #ffffff;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}
 
 

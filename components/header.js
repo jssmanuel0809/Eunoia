@@ -18,6 +18,7 @@ class Header extends HTMLElement {
         header{
           width: 100%
         }
+
         .headerlogo{
           position: fixed;
           background: #355C7D;  /* fallback for old browsers */
@@ -65,6 +66,79 @@ class Header extends HTMLElement {
           color: black;
           text-decoration-line: none;
         }
+
+
+        header2{
+          width: 100%
+        }
+      
+        .headernav2{
+          position: fixed;
+          top: 98; 
+          left: 0; 
+          right: 0;
+          background: #fff;
+          padding: 5px 10%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          justify-content: center;
+          box-shadow: 0 .6rem 1rem rgba(0, 0, 0, .1);
+          z-index: 2;
+        }
+        .headernav2 a{
+          color: grey;
+        }
+      
+        .headernav a:hover{
+          color: black;
+          text-decoration-line: none;
+        }
+        .outer li{
+          position:relative;
+          display:inline-block;
+          margin-right:10px;
+        }
+        .outer li a, .inner li a{
+          text-decoration:none;
+        }
+        .inner{
+          color: #fff;
+          position:absolute;
+          display:none;
+          width:155px;
+          padding:5px 20px;
+          background-color: #C06C84;
+          margin-top:0px;
+          border-radius:0px 5px 5px 5px;
+          opacity: 0.9;
+        }
+        .inner li{
+          padding:5px 5px;
+        }
+        .inner li a{
+          font-size:medium;
+        }
+        .inner li:hover a{
+          font-size:large;
+          color: white;
+          border-bottom: #6C5B7B 4px solid;
+          border-radius:2px;
+          padding-left:3px;
+          padding-right:3px;
+          background-color:black;
+        }
+        .outer li:hover .inner{
+          display:block;
+        }
+      
+
+
+
+
+
+
+
 
         <!--dark mode css-->
         body.dark {
@@ -122,7 +196,17 @@ class Header extends HTMLElement {
         .darkmode .headernav{
           background-color: black;
         }
+        .darkmode .headernav2{
+          background-color: black;
+        }
+
+        .darkmode .headernav2 .li{
+          color: white;
+        }
         .darkmode .headernav a:hover{
+          color: white;
+        }
+        .darkmode .headernav2 a:hover{
           color: white;
         }
         .darkmode .content{
@@ -213,6 +297,8 @@ class Header extends HTMLElement {
   .close:hover {
     opacity: 1;
   }*/
+
+
         </style>
       </head>
 
@@ -225,8 +311,10 @@ class Header extends HTMLElement {
             <button class="logout">logout</button>
           </div>
 
-            <!-- HEADER - NAV -->
-          <div class="headernav">
+
+          <!-- HEADER - NAV -->
+
+        <div class="headernav">
           <!--dark mode-->
           <div>
             <input type="checkbox" onclick="myFunction()" class="checkboxmode" id="chkmode" />
@@ -237,10 +325,7 @@ class Header extends HTMLElement {
 
             <a href="../pages/index.html">HOME</a>
             <a href="../pages/shop.html">SHOP ALL</a>
-            <a href="../pages/shop.html#apparels">APPARELS</a>
-            <a href="../pages/shop.html#accessories">ACCESSORIES</a>
-            <a href="../pages/shop.html #books">BOOKS</a>
-            <a href="../pages/faqs.html">FAQS</a>
+            <a href="../pages/newFaqs.html">FAQS</a>
             <a href="../pages/reviews.html">REVIEWS</a>
             <a href="../pages/about.html">ABOUT</a>
             <a href="../pages/contact.html">CONTACT</a>
@@ -248,6 +333,102 @@ class Header extends HTMLElement {
           </div>
           <script src="/script/home.js"></script>
       </header>
+
+
+<header2>
+   <!-- HEADER - NAV -->
+  <div class="headernav2">
+
+  <ul class="outer">
+
+  <li><a href="../pages/shopAsia.html">>> ASIA</a>
+    <ul class="inner">
+      <li><a href="../pages/shopAsia.html" style="color: white;">Shop All</a></li>
+      <li><a href="#apparelsAsia" style="color: white;">Apparel</a></li>
+      <li><a href="#accessoriesAsia" style="color: white;">Accessories</a></li>
+      <li><a href="#booksAsia" style="color: white;">Books</a></li>
+    </ul>
+  </li>
+
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+
+  <li><a href="../pages/shopEurope.html">>> EUROPE</a>
+  <ul class="inner">
+  <li><a href="../pages/shopEurope.html" style="color: white;">Shop All</a></li>
+      <li><a href="#apparelsEurope" style="color: white;">Apparel</a></li>
+      <li><a href="#accessoriesEurope" style="color: white;">Accessories</a></li>
+      <li><a href="#booksEurope" style="color: white;">Books</a></li>
+</ul>
+</li>
+
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+
+  <li><a href="../pages/shopAmerica.html">>> AMERICA</a>
+  <ul class="inner">
+  <li><a href="../pages/shopAmerica.html" style="color: white;">Shop All</a></li>
+  <li><a href="#apparelsAmerica" style="color: white;">Apparel</a></li>
+  <li><a href="#accessoriesAmerica" style="color: white;">Accessories</a></li>
+  <li><a href="#booksAmerica" style="color: white;">Books</a></li>
+    </ul>
+    </li>
+
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+
+  <li><a href="../pages/shopAustralia.html">>> AUSTRALIA</a>
+  <ul class="inner">
+  <li><a href="../pages/shopAustralia.html" style="color: white;">Shop All</a></li>
+      <li><a href="#apparelsAustralia" style="color: white;">Apparel</a></li>
+      <li><a href="#accessoriesAustralia" style="color: white;">Accessories</a></li>
+      <li><a href="#booksAustralia" style="color: white;">Books</a></li>
+</ul>
+</li>
+
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+
+  <li><a href="../pages/shopAfrica.html">>> AFRICA</a>
+  <ul class="inner">
+  <li><a href="../pages/shopAfrica.html" style="color: white;">Shop All</a></li>
+      <li><a href="#apparelsAfrica" style="color: white;">Apparel</a></li>
+      <li><a href="#accessoriesAfrica" style="color: white;">Accessories</a></li>
+      <li><a href="#booksAfrica" style="color: white;">Books</a></li>
+</ul>
+</li>
+</ul>
+</div>
+    
+    <script src="/script/home.js"></script>
+</header2>
+
+
+
+
+
+
+
+
+
+
+     
 
         `;
   }
