@@ -20,15 +20,12 @@
         <header-component></header-component>
 
 
-        <a href="#popup"><h1><i class="fa fa-shopping-cart"></i></h1></a>
+        <a href="#cartpopup"><h1 class="cart-icon"><i class="fa fa-shopping-cart"></i></h1></a>
         <!--PRODUCT GALLERY-->
-        <div class="small-container">
+        <div class="shop-container">
+            <h1 class="head">AFRICA</h1>
             <!-- ----------APPARELS---------- -->
             <div id="apparelsAfrica" class="small-container">
-                <br>
-                <h3 style="font-family: Apple Chancery; color: #6C5B7B;">Products Available in Africa</h3>
-                <br>
-                <br>
                 <h3>ALL PRODUCTS - APPAREL (Africa)</h3>
                 <div class="row">
                     <div class="col-1">
@@ -180,7 +177,7 @@
             </div>
 
           <!--cart popup-->
-        <div id="popup" class="overlay">
+        <div id="cartpopup" class="cartoverlay">
             <div class="cartpopup">
                 <a class="close" href="#">&times;</a>
                 <div id="contents" class="cartcontent">
@@ -204,7 +201,7 @@
 
 <script>
     var select = document.querySelector('.cartcontent');
-    var noti = document.querySelector('h1');
+    var noti = document.querySelector('.cart-icon');
     var button = document.getElementsByTagName('button');
     var count = 0;
     for(but of button){
