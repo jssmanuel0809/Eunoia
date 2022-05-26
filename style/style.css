@@ -17,7 +17,6 @@ body{
 section{
     padding: 20px 40px;
 }
-
 /*----------AD POPUP----------*/
 .ad-overlay {
   position: fixed;
@@ -84,12 +83,12 @@ section{
 }
 .home .content h3{
     font-size: 3rem;
-    color: #333;
+    color: var(--foreground);
     padding-right: 40px;
 }
 .home .content p{
     font-size: 1rem;
-    color: black;
+    color: var(--foreground);
     padding: 1rem 0;
     line-height: 1.5;
     margin-right: 50px;
@@ -116,14 +115,14 @@ section{
 }
 .btn1:hover{
   text-decoration: none;
-  background: #6C5B7B;
+  background: #C06C84;
   color: white;
   cursor: pointer;
 }
 
 /* ----------QUOTE---------- */
 .quote{
-  border: solid black;
+  border: solid var(--foreground);
   border-left: 0; border-right: 0;
   border-width: thin;
   height: 250px;
@@ -144,7 +143,7 @@ section h5{
 .popular-products h3{
   text-align: center;
   font-size: 50px;
-  color: #333;
+  color: var(--foreground);
   position: relative;
   margin: 25px 0 50px;
 }
@@ -167,9 +166,8 @@ section h5{
   text-align: center;
   padding:10px;
   margin:10px;
-  background:#f1f1f1;
-  color:#666;
   height: 350px;
+  box-shadow: 5px 5px 10px var(--foreground);
 }
 .MultiCarousel .MultiCarousel-inner .item .pad10{
   border-radius: 15px;
@@ -179,13 +177,13 @@ section h5{
   font-family: Courier;
   margin-top: 15px;
   font-size: 20px;
-  color: #333;
+  color: var(--foreground);
 }
 .MultiCarousel .MultiCarousel-inner .item .pad10 p {
   font-family: Courier;
   margin-top: 5px;
   font-size: 18px;
-  color: #333;
+  color: var(--foreground);
 }
 .MultiCarousel .MultiCarousel-inner .item .pad10 img {
   margin-top: 15px;
@@ -245,9 +243,20 @@ section h5{
 .customer-review h3{
   text-align: center;
   font-size: 50px;
-  color: #333;
+  color: var(--foreground);
   position: relative;
-  margin: 25px 0 50px;
+  margin-top: 50px;
+}
+.customer-review p{
+  color: var(--foreground);
+  text-align: center;
+  margin-bottom: 25px;
+}
+.customer-review p a{
+  color: var(--foreground);
+  font-weight: bold;
+  text-decoration: none;
+
 }
 .carousel {
   height: 400px;
@@ -257,19 +266,17 @@ section h5{
 }
 /* CUSTOMER REVIEW/SLIDES */
 .carousel .carousel-item {
-  color: #999;
+  color: var(--foreground);
   font-size: 14px;
   text-align: center;
   overflow: hidden;
   min-height: 260px;
 }
 .carousel .carousel-item a {
-  color: #561872;
+  color: #EAC2E6;
 }
 /* BOX FOR NAME AND STARS */
 .carousel .header-box {
-  /* width: 145px;
-  height: 145px; */
   margin: 0 auto;
   border-radius: 50%;
 }
@@ -281,7 +288,7 @@ section h5{
   padding-bottom: 5px;
 }
 .carousel .overview b {
-  color: #333;
+  color: var(--foreground);
   font-size: 20px;
   text-transform: uppercase;
   display: block;

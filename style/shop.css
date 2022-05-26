@@ -25,13 +25,34 @@ section{
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.shop-container{
+  display: flex;
+  padding-top: 145px;
+  padding-left: 25px;
+  padding-right: 25px;
+  /* text-align: center; */
+  align-items: center;
+  flex-direction: column;
+}
+.shop-container h1{
+  color: var(--foreground);
+  font-size: 5rem;
+  height: 50px;
+  position: inherit;
+  /* padding-bottom: 20px; */
+}
 .small-container{
-  padding-top: 85px;
+  padding-top: 145px;
   justify-content: space-between;
   padding-left: 25px;
   padding-right: 25px;
 }
-
+.small-container h3{
+  font-family: Courier;
+  text-align: center;
+  font-size: 50px;
+  color: var(--foreground);
+}
 .col-1{
   flex-basis: 20%;
   padding: 15px;
@@ -40,25 +61,35 @@ section{
   margin-right: 2%;
   margin-bottom: 50px;
   border-radius: 10px;
-  box-shadow: 0 .3rem 1rem rgba(0, 0, 0, .1);
-  background: white;
+  box-shadow: 5px 5px 10px var(--foreground);
   text-align: center;
+}
+.col-1 img{
+  margin-top: 15px;
+  width: 100%;
+}
+.col-1 .popular-book{
+  height: 150px;
+}
+.col-1 .popular-book, .col-1 .popular-shirt{
+  margin-bottom: 20px;
 }
 .col-1 h4{
   font-family: Courier;
   margin-top: 15px;
   font-size: 20px;
-  color: #333;
+  color: var(--foreground)#333;
 }
 .col-1 p{
   font-family: Courier;
   margin-top: 5px;
   font-size: 18px;
-  color: #333;
+  color: var(--foreground)#333;
 }
-.col-1:hover{
-  background: lightgray;
-}
+/* .col-1:hover{
+  background: var(--foreground);
+  color: var(--background);
+} */
 .col-1 img{
   margin-top: 15px;
   width: 100%;
@@ -85,16 +116,7 @@ section{
   color: white;
   cursor: pointer;
 }
-
-.small-container h3{
-  font-family: Courier;
-  text-align: center;
-  font-size: 50px;
-  color: #333;
-}
-
-
-h1{
+.cart-icon{
   width: 3%;
   position: fixed;
   top: 18px;
@@ -104,10 +126,10 @@ h1{
   z-index: 5;
   color: white;
 }
-h1:before{
+.cart-icon:before{
   content: attr(data-count);
   position: absolute;
-  color: white;
+  color: var(--foreground);
   right: 10px;
   font-size: 15px;
   text-align: center;
@@ -118,7 +140,7 @@ h1:before{
   border-radius: 50%;
   opacity: 0;
 }
-h1.zero:before{
+.cart-icon.zero:before{
   opacity: 1;
 }
 
@@ -130,7 +152,7 @@ h1.zero:before{
   height: 100px;
   display: flex;
   padding: 5px;
-  border: 1px solid white;
+  border: 1px solid var(--background);
   position: relative;
   margin: 5px auto;
 }
@@ -145,13 +167,13 @@ h1.zero:before{
   position: absolute;
   left: 20%;
   top: 30%;
-  color: black;
+  color: var(--foreground);
 }
 .cartcontent div p{
   position: absolute;
   left: 55%;
   top: 30%;
-  color: black;
+  color: var(--foreground);
 }
 .cartcontent div button{
   position: absolute;
@@ -183,7 +205,7 @@ h1.zero:before{
 .cartpopup {
   margin: 100px auto;
   padding: 1px;
-  background: #fff;
+  background: var(--background);
   width: 70%;
   height: 550px;
   display: flex;
@@ -220,7 +242,7 @@ h1.zero:before{
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
-  color: black;
+  color: var(--foreground);
 }
 .close:hover {
   opacity: 1;
@@ -315,7 +337,6 @@ a {
   color: var(--white);
 }
 
-
 .filterDiv {
   float: left;
   background-color: #2196F3;
@@ -334,8 +355,8 @@ a {
 .container {
   margin-top: 20px;
   overflow: hidden;
-
-  @media screen and (max-width: 900px) {
+}
+@media screen and (max-width: 900px) {
   body{
       position: relative;
   }

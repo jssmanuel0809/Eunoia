@@ -12,7 +12,7 @@ function submitReview(){
 		+"<h4 style='color: rgb(255, 161, 161);'>Product Category:</h4>"
 		+"<p>"+products+"</p>"
 		+"<h4 style='color: rgb(255, 161, 161);'>Feedback/Comments:</h4>"
-		+"<p style='font-size: 1.2vw;'>"+review+"</p>" + "<br>"
+		+"<p'>"+review+"</p>" + "<br>"
 		+"<hr style='border-top:1px solid rgb(255, 161, 161);'/>";
 
 		document.getElementById('result').innerHTML+=html;
@@ -28,7 +28,7 @@ function rating(StarNum){
 	sessionStorage.rateStar = rate;
 	for(var s = 0; s < 5; s++){
 		if(s < rate){
-			document.getElementById((s + 1)).style.color="yellow";
+			document.getElementById((s + 1)).style.color="rgb(253, 180, 42)";
 		}
 		else{
 			document.getElementById((s + 1)).style.color="rgb(68,68,68)";
