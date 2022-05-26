@@ -1,0 +1,165 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Reviews</title>
+
+        <link rel="stylesheet" href="../style/about.css">
+        <link rel="stylesheet" href="../style/reviews.css">
+
+        <!-- components -->
+        <script src="../components/header.js" type="text/javascript" defer></script>
+        <script src="../components/footer.js" type="text/javascript" defer></script>
+        <script src="../script/reviews.js" type="text/javascript" defer></script>
+
+
+    </head>
+
+            <!-- HEADER -->
+<header-component></header-component>
+
+
+<!-------------------------------- REVIEWS -------------------------------------->
+
+    <div class="rev-section">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 class="title">Customer Reviews</h1>
+          <p class="subheader"> Here are some of the Famous Influencers who loved our products!</p>
+        
+        <div class="ReviewSection">
+        <div class="review">
+           <div class="UserImage">
+              <img src="https://i0.wp.com/annyeongoppa.com/wp-content/uploads/2019/04/parkseojoon.jpg?fit=1000%2C563&ssl=1" class="reviewsImage" width="250px">
+           </div>
+           <div class="ReviewBox">
+              <div class="ReviewUserName">Park Seo Joon</div>
+              <div class="ReviewUserDescription">Actor from Asia</div>
+              <div class="rating">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+              </div>
+              <div class="ReviewContent">"As an actor, I ought to look good in front of cameras. Eunoia's collections certainly added ambiance to my everyday looks."</div>
+           </div>
+        </div>
+        <div class="review">
+           <div class="UserImage">
+              <img src="https://media.glamourmagazine.co.uk/photos/627ccf4a98ef947e1b4d22f9/3:4/w_1440,h_1920,c_limit/ARIANA%20GRANDE%20120522%20GettyImages-1202825234b.jpg" class="reviewsImage" width="250px">
+           </div>
+           <div class="ReviewBox">
+              <div class="ReviewUserName">Ariana Grande</div>
+              <div class="ReviewUserDescription">Singer From US</div>
+              <div class="rating">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+              </div>
+              <div class="ReviewContent">
+               "I have always loved wearing sweatshirts. Luckily, I found the most comfortable and cute pieces of them in Eunoia."</div>
+           </div>
+        </div>
+        <div class="review">
+           <div class="UserImage">
+              <img src="https://photos.hancinema.net/photos/fullsizephoto1198150.jpg" class="reviewsImage" width="250px">
+           </div>
+           <div class="ReviewBox">
+              <div class="ReviewUserName">Lee Min Ho</div>
+              <div class="ReviewUserDescription">Fashion Critic from Europe</div>
+              <div class="rating">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+              </div>
+              <div class="ReviewContent">"The fabrics used in Eunoia's clothing are exceptional. They are ideal for both casual and semi-formal wear."</div>
+           </div>
+        </div>
+        </div>
+        </div>
+
+<!------------------------------ SPACES ---------------------------------------->
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2 class="review-header">Let us know what you think about our service/products</h2>
+        <br>
+        <br>
+<!------------------------- FEEDBACK FORM --------------------------------------------->
+<center>
+   <div class="container2space">
+    <div class="container2">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 well" style="width: 350px;">
+        <div class="col-md-4">
+            <div class="form-group">
+                <br>
+                <h3><label>Username:</label></h3>
+                <input type="text" id="user" class="form-control"/>
+                <br>
+                <br>
+                <h3><label for="Category">Product Category:</label></h3>
+                <select id="products" name="items">
+                <option value="All">All</option>
+                <option value="Clothes">Clothes</option>
+                <option value="Books">Books</option>
+                <option value="Accessories">Accessories</option>
+                </select>
+            </div>
+            <br>
+            <div>
+               <h3>Rating:</h3>
+               <br>
+                <span id="1" style="font-size:50px; cursor:pointer; color: #ccc;"  class="fa fa-star" onmouseover="rating(this)" rating="starmark(this)" ></span>
+                <span id="2"  style="font-size:50px; cursor:pointer; color: #ccc;" class="fa fa-star" onmouseover="rating(this)" rating="starmark(this)"></span>
+                <span id="3"  style="font-size:50px; cursor:pointer; color: #ccc;" class="fa fa-star" onmouseover="rating(this)" rating="starmark(this)"></span>
+                <span id="4"  style="font-size:50px; cursor:pointer; color: #ccc;" class="fa fa-star" onmouseover="rating(this)" rating="starmark(this)"></span>
+                <span id="5"  style="font-size:50px; cursor:pointer; color: #ccc;" class="fa fa-star" onmouseover="rating(this)" rating="starmark(this)"></span>
+            </div>
+            <br>
+            <br>
+            <div class="form-group">
+                <h3>Feedback/Comment:</h3>
+                <textarea id="review" class="form-control"></textarea>
+            </div>
+            <br>
+            <br>
+            <input type="submit" onclick="submitReview()" value="Submit Review">
+            <br>
+            <br>
+        </div>  
+    </div>
+</div>
+</div>
+</center>
+<!------------------------------ SPACES ---------------------------------------->
+<br>
+<br>
+<br>
+<!------------------------ RESULTS FEEDBACK ------------------------------------>
+
+<div class="container3">
+    <h1 style="font-family: Marker Felt; color: rgb(255, 161, 161);">Read Feedbacks here:</h1>
+    <hr style='border-top:1px solid rgb(255, 161, 161);'/>
+    <div id="result"></div>
+</div>
+<!------------------------------ SPACES ---------------------------------------->
+<br>
+<br>
+<br>
+
+            <!-- FOOTER-->
+        <footer-component></footer-component>
+</body>
+</html>

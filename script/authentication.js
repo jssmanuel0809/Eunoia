@@ -1,12 +1,12 @@
 // form loading animation
 
-// const form = [...document.querySelector('.form').children];
+const form = [...document.querySelector('.form').children];
 
-// form.forEach((item, i) => {
-//     setTimeout(() => {
-//         item.style.opacity = 1;
-//     }, i*100);
-// })
+form.forEach((item, i) => {
+    setTimeout(() => {
+        item.style.opacity = 1;
+    }, i*100);
+})
 
 window.onload = () => {
     if(sessionStorage.name){
@@ -14,20 +14,19 @@ window.onload = () => {
     }
 }
 
-//form validation
+// form validation
 
 const name = document.querySelector('.name') || null;
 const email = document.querySelector('.email');
 const password = document.querySelector('.password');
 const submitBtn = document.querySelector('.submit-btn');
 
-if(name == null){
+if(name == null){ // means login page is open
     submitBtn.addEventListener('click', () => {
-        fetch('/login-user', {
+        fetch('/login-user',{
             method: 'post',
-            headers: new Headers({'Content-Type': 'applications/json'}),
+            headers: new Headers({'Content-Type': 'application/json'}),
             body: JSON.stringify({
-                name: name.value,
                 email: email.value,
                 password: password.value
             })
@@ -37,8 +36,8 @@ if(name == null){
             validateData(data);
         })
     })
-}
-else {
+} else{ // means register page is open
+
     submitBtn.addEventListener('click', () => {
         fetch('/register-user', {
             method: 'post',
@@ -54,13 +53,13 @@ else {
             validateData(data);
         })
     })
+
 }
 
 const validateData = (data) => {
     if(!data.name){
         alertBox(data);
-    }
-    else{
+    } else{
         sessionStorage.name = data.name;
         sessionStorage.email = data.email;
         location.href = '/';
@@ -72,7 +71,7 @@ const alertBox = (data) => {
     const alertMsg = document.querySelector('.alert');
     alertMsg.innerHTML = data;
 
-    alertContainer.style.top = '5%';
+    alertContainer.style.top = `5%`;
     setTimeout(() => {
         alertContainer.style.top = null;
     }, 5000);
