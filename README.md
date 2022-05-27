@@ -3,13 +3,7 @@ E-commerce website: Requirements for Applications Development & Empowerment Tech
 
 Repository made after Midterms submissions.
 
-Members:
-- Azores, Nicole Irish
-- Chuyat, Sunshine
-- Manuel, Jemima Simone
-- Tuliao, Rose Therese
-- Yara, Chloe Dionne
-
 Instructions:
 Make sure Node and NPM are installed.
 Run " npm start " in terminal.
+Go to (http://localhost:3000/login) on browser.
