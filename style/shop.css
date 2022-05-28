@@ -390,7 +390,7 @@ a {
 .popup {
     margin: 75px auto;
     padding: 1px;
-    background: #ffffff;
+    background: var(--background);
     /* border: 1px solid #666; */
     width: 80%;
     height: 80%;
@@ -435,7 +435,7 @@ a {
 }
 .col2 h2{
   font-size: 40px;
-  color: white;
+  color: var(--foreground);
   margin: auto auto auto 30px;
 }
 .col2 h6{
@@ -452,6 +452,7 @@ a {
 }
 
 .prod-desc{
+  color: var(--foreground);
   height: 80px;
 }
 

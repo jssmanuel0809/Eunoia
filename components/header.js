@@ -46,26 +46,26 @@ class Header extends HTMLElement {
           justify-content: flex-start;
           z-index:100;
         }
-        nav .content{
+        nav .content-header{
           display: flex;
           align-items: center;
         }
-        nav .content .links{
+        nav .content-header .links{
           margin-left: 80px;
           display: flex;
         }
-        .content .logo a{
+        .content-header .logo a{
           color: #fff;
           font-size: 30px;
           font-weight: 400;
           position: fixed;
         }
-        .content .links li{
+        .content-header .links li{
           list-style: none;
           line-height: 70px;
         }
-        .content .links li a,
-        .content .links li label{
+        .content-header .links li a,
+        .content-header .links li label{
           color: #fff;
           font-size: 18px;
           font-weight: 500;
@@ -73,11 +73,11 @@ class Header extends HTMLElement {
           border-radius: 5px;
           transition: all 0.3s ease;
         }
-        .content .links li label{
+        .content-header .links li label{
           display: none;
         }
-        .content .links li a:hover,
-        .content .links li label:hover{
+        .content-header .links li a:hover,
+        .content-header .links li label:hover{
           background: #A91079;
         }
         .wrapper .search-icon,
@@ -141,7 +141,7 @@ class Header extends HTMLElement {
         }
         
         /* Dropdown Menu code start */
-        .content .links ul{
+        .content-header .links ul{
           position: absolute;
           background: #827397;
           top: 80px;
@@ -149,27 +149,27 @@ class Header extends HTMLElement {
           opacity: 0;
           visibility: hidden;
         }
-        .content .links li:hover > ul{
+        .content-header .links li:hover > ul{
           top: 70px;
           opacity: 1;
           visibility: visible;
           transition: all 0.3s ease;
         }
-        .content .links ul li a{
+        .content-header .links ul li a{
           display: block;
           width: 100%;
           line-height: 30px;
           border-radius: 0px!important;
         }
-        .content .links ul ul{
+        .content-header .links ul ul{
           position: absolute;
           top: 0;
           right: calc(-100% + 8px);
         }
-        .content .links ul li{
+        .content-header .links ul li{
           position: relative;
         }
-        .content .links ul li:hover ul{
+        .content-header .links ul li:hover ul{
           top: 0;
         }
         
@@ -180,10 +180,10 @@ class Header extends HTMLElement {
             max-width: 100%;
             padding: 0 20px;
           }
-          nav .content .links{
+          nav .content-header .links{
             margin-left: 30px;
           }
-          .content .links li a{
+          .content-header .links li a{
             padding: 8px 13px;
           }
           .wrapper .search-box{
@@ -211,7 +211,7 @@ class Header extends HTMLElement {
           .wrapper #show-menu:checked ~ .menu-icon i::before{
             content: "\f00d";
           }
-          nav .content .links{
+          nav .content-header .links{
             display: block;
             position: fixed;
             background:  linear-gradient(to right, #4D4C7D, #827397);
@@ -225,27 +225,27 @@ class Header extends HTMLElement {
             padding-bottom: 100px;
             transition: all 0.3s ease;
           }
-          nav #show-menu:checked ~ .content .links{
+          nav #show-menu:checked ~ .content-header .links{
             left: 0%;
           }
-          .content .links li{
+          .content-header .links li{
             margin: 15px 20px;
           }
-          .content .links li a,
-          .content .links li label{
+          .content-header .links li a,
+          .content-header .links li label{
             line-height: 40px;
             font-size: 20px;
             display: block;
             padding: 15px 30px;
             cursor: pointer;
           }
-          .content .links li a.desktop-link{
+          .content-header .links li a.desktop-link{
             display: none;
           }
         
           /* dropdown responsive code start */
-          .content .links ul,
-          .content .links ul ul{
+          .content-header .links ul,
+          .content-header .links ul ul{
             position: static;
             opacity: 1;
             visibility: visible;
@@ -253,22 +253,22 @@ class Header extends HTMLElement {
             max-height: 0px;
             overflow: hidden;
           }
-          .content .links #show-features:checked ~ ul,
-          .content .links #show-services:checked ~ ul,
-           .content .links #show-about:checked ~ ul,
-          .content .links #show-items:checked ~ ul,
-          .content .links #show-asia:checked ~ ul,
-          .content .links #show-america:checked ~ ul,
-          .content .links #show-africa:checked ~ ul,
-          .content .links #show-australia:checked ~ ul,
-          .content .links #show-europe:checked ~ ul,
-          .content .links #show-category:checked ~ ul{
+          .content-header .links #show-features:checked ~ ul,
+          .content-header .links #show-services:checked ~ ul,
+           .content-header .links #show-about:checked ~ ul,
+          .content-header .links #show-items:checked ~ ul,
+          .content-header .links #show-asia:checked ~ ul,
+          .content-header .links #show-america:checked ~ ul,
+          .content-header .links #show-africa:checked ~ ul,
+          .content-header .links #show-australia:checked ~ ul,
+          .content-header .links #show-europe:checked ~ ul,
+          .content-header .links #show-category:checked ~ ul{
             max-height: 100vh;
           }
-          .content .links ul li{
+          .content-header .links ul li{
             margin: 7px 20px;
           }
-          .content .links ul li a{
+          .content-header .links ul li a{
             font-size: 18px;
             line-height: 10px;
             border-radius: 5px!important;
@@ -279,7 +279,7 @@ class Header extends HTMLElement {
           .wrapper nav{
             padding: 0 10px;
           }
-          .content .logo a{
+          .content-header .logo a{
             font-size: 27px;
           }
           .wrapper .search-box{
@@ -361,7 +361,7 @@ class Header extends HTMLElement {
           padding: 20px;
           color: #faf9f8;
         }
-        .content
+        .content-header
         {
           cursor: pointer;
         }
@@ -383,7 +383,7 @@ class Header extends HTMLElement {
           <input type="checkbox" id="show-search">
           <input type="checkbox" id="show-menu">
           <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
-          <div class="content">
+          <div class="content-header">
             <img src="../public/image/logotextwhite.png" width="115" height="32"></img>
             <ul class="links">
               <li><a href="../pages/index.html">Home</a></li>
