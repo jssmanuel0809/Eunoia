@@ -367,7 +367,123 @@ a {
   margin-top: 20px;
   overflow: hidden;
 }
+<<<<<<< Updated upstream
 @media screen and (max-width: 800px) {
+=======
+
+/* ------------PRODUCT POPUP-------------- */
+   /* 'SHADOW' BEHIND CONTENT */
+  .overlay {
+    position: fixed;
+    top: 100;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(40, 36, 36, 0.5);
+    transition: opacity 200ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+  
+  /* POPUP BOX */
+.popup {
+    margin: 75px auto;
+    padding: 1px;
+    background: #ffffff;
+    /* border: 1px solid #666; */
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  /* CONTENT INSIDE POPUP */
+.content {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    /* text-align: center; */
+    /* background: #091033; */
+    /* background-color: white; */
+    /* opacity: 90%; */
+    font-family: 'Lato', sans-serif;
+}
+
+.popup-table{
+  height: 450px;
+}
+
+.img-column {
+  width: 450px;
+  margin: auto 0px auto 50px;
+}
+.img-column-books {
+  width: 300px;
+  margin: auto 0px auto 50px;
+}
+
+/* Colum 2, product info*/
+.col2{
+  width: 700px;
+}
+.col2 h2{
+  font-size: 40px;
+  color: white;
+  margin: auto auto auto 30px;
+}
+.col2 h6{
+  margin: auto auto 30px 30px;
+}
+.col2 p{
+  text-indent: 50px;
+  margin: auto 30px;
+}
+
+.prod-name{
+  height: 50px;
+  background-image: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+}
+
+.prod-desc{
+  height: 80px;
+}
+
+.cart-section{
+  margin: 30px auto 0px 30px;
+  height: 50px;
+}
+  
+  /* CLOSE BUTTON */
+.close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 20px;
+    opacity: 0.8;
+    transition: all 200ms;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+.close:hover {
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 900px) {
+>>>>>>> Stashed changes
   body{
       position: relative;
   }
