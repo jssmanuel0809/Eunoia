@@ -406,6 +406,10 @@ a {
     /* opacity: 90%; */
     font-family: 'Lato', sans-serif;
 }
+
+.img-column {
+  width : 50px;
+}
   
   /* CLOSE BUTTON */
 .close {
