@@ -261,7 +261,8 @@ class Header extends HTMLElement {
           .content .links #show-america:checked ~ ul,
           .content .links #show-africa:checked ~ ul,
           .content .links #show-australia:checked ~ ul,
-          .content .links #show-europe:checked ~ ul{
+          .content .links #show-europe:checked ~ ul,
+          .content .links #show-category:checked ~ ul{
             max-height: 100vh;
           }
           .content .links ul li{
@@ -453,9 +454,7 @@ class Header extends HTMLElement {
                   </li>
                 </ul>
               </li>
-          <li> <a href="../pages/about.html" class="desktop-link">About</a>
-                    <input type="checkbox" id="show-about">
-                    <label for="show-about">About</label></li>
+            <li><a href="../pages/about.html">About</a></li>
               <li>
                 <a href="" class="desktop-link">More</a>
                 <input type="checkbox" id="show-services">
