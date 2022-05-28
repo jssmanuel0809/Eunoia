@@ -134,7 +134,7 @@ section{
   left: 90%;
   right: 4%;
   cursor: pointer;
-  z-index: 5;
+  z-index: 400;
   color: white;
 }
 .cart-icon:before{

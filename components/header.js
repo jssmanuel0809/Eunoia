@@ -35,6 +35,7 @@ class Header extends HTMLElement {
           background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
           position: fixed;
           width: 100%;
+          z-index: 300;
         }
         .wrapper nav{
           position: relative;
