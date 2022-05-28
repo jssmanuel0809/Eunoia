@@ -31,127 +31,341 @@ class Header extends HTMLElement {
           background: var(--background);
           color: var(--foreground);
         }
-        header{
-          width: 100%
-        }
-        .headerlogo .greeting{
-          font-size: 15px;
-          color: white;
-          padding-right: 10px;
-        }
-        .logout{
-          color: white;
-          transition: background 0.5s;
-          text-decoration: none;
-          border: none;
-          font-size: 15px;
-          background: transparent;
-          padding-right: 10px;
-          margin-bottom: 25;
-        }
-        .logout:hover{
-          text-decoration: none;
-          cursor: pointer;
-          font-weight: bold;
-        }
-
-        .headerlogo .user{
-          display: flex;
-          margin-right: 50px;
-        }
-        .headerlogo{
-          display: flex;
-          justify-content: space-around;
-          align-items: flex-start;
+        .wrapper{
+          background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
           position: fixed;
-          background: #355C7D;  /* fallback for old browsers */
-          background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
-          background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-          height: 50;
           width: 100%;
-          top: 0; left: 0; right: 0;
-          text-align: center;
-          font-size: 100%;
-          padding: 15 0 0 0;
-          z-index: 2;
         }
-        .headerlogo .logo{
-          height: 30px;
-          margin-right: 500px;
+        .wrapper nav{
+          position: relative;
+          display: flex;
+          max-width: calc(100% - 200px);
+          margin: 0 auto;
+          height: 70px;
+          align-items: center;
+          justify-content: flex-start;
+          z-index:100;
         }
-        .headerlogo img:hover{
+        nav .content{
+          display: flex;
+          align-items: center;
+        }
+        nav .content .links{
+          margin-left: 80px;
+          display: flex;
+        }
+        .content .logo a{
+          color: #fff;
+          font-size: 30px;
+          font-weight: 400;
+          position: fixed;
+        }
+        .content .links li{
+          list-style: none;
+          line-height: 70px;
+        }
+        .content .links li a,
+        .content .links li label{
+          color: #fff;
+          font-size: 18px;
+          font-weight: 500;
+          padding: 9px 40px;
+          border-radius: 5px;
+          transition: all 0.3s ease;
+        }
+        .content .links li label{
+          display: none;
+        }
+        .content .links li a:hover,
+        .content .links li label:hover{
+          background: #A91079;
+        }
+        .wrapper .search-icon,
+        .wrapper .menu-icon{
+          color: #fff;
+          font-size: 18px;
           cursor: pointer;
+          line-height: 70px;
+          width: 70px;
+          text-align: center;
         }
-        .headernav{
-          position: fixed;
-          top: 50; left: 0; right: 0;
-          background: var(--background);
-          color: var(--foreground);
-          padding: 10px 10%;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          z-index: 2;
+        .wrapper .menu-icon{
+          display: none;
         }
-        .headernav a{
-          color: gray;
-        }
-        .headernav a:hover{
-          color: var(--foreground);
-          text-decoration-line: none;
-        }
-
-        .nav-regions{
-          position: fixed;
-          top: 90; 
-          left: 0; 
-          right: 0;
-          background: var(--background);
-          color: var(--foreground);
-          padding: 5px 10%;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          box-shadow: 7px 13px 1rem rgba(0, 0, 0, .1);
-          z-index: 1;
-        }
-        .nav-regions a{
-          color: gray;
-        }
-        .nav-regions a:hover{
-          color: var(--foreground);
-          text-decoration-line: none;
+        .wrapper #show-search:checked ~ .search-icon i::before{
+          content: "\f00d";
         }
         
-        .shopDropdown {
-          position: relative;
-          display: inline-block;
-        }     
-        .shopDropdown-content {
-          display: none;
+        .wrapper .search-box{
           position: absolute;
-          min-width: 130px;
-          z-index: 100;
-          justify-items: center;
-          background: var(--background);
-          color: var(--foreground);
+          height: 100%;
+          max-width: calc(100% - 50px);
+          width: 100%;
+          opacity: 0;
+          pointer-events: none;
+          transition: all 0.3s ease;
         }
-        .shopDropdown:hover .shopDropdown-content {
+        .wrapper #show-search:checked ~ .search-box{
+          opacity: 1;
+          pointer-events: auto;
+        }
+        .search-box input{
+          width: 100%;
+          height: 100%;
+          border: none;
+          outline: none;
+          font-size: 17px;
+          color: #fff;
+           background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+          padding: 0 100px 0 15px;
+        }
+        .search-box input::placeholder{
+          color: #f2f2f2;
+        }
+        .search-box .go-icon{
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          line-height: 60px;
+          width: 70px;
+          background: #711A75;
+          border: none;
+          outline: none;
+          color: #fff;
+          font-size: 20px;
+          cursor: pointer;
+        }
+        .wrapper input[type="checkbox"]{
+          display: none;
+        }
+        
+        /* Dropdown Menu code start */
+        .content .links ul{
+          position: absolute;
+          background: #827397;
+          top: 80px;
+        /*z-index: -1;*/
+          opacity: 0;
+          visibility: hidden;
+        }
+        .content .links li:hover > ul{
+          top: 70px;
+          opacity: 1;
+          visibility: visible;
+          transition: all 0.3s ease;
+        }
+        .content .links ul li a{
           display: block;
+          width: 100%;
+          line-height: 30px;
+          border-radius: 0px!important;
         }
-
-        .headernav #time{
-          margin-bottom: 0px;
-          padding-left: 50px;
+        .content .links ul ul{
+          position: absolute;
+          top: 0;
+          right: calc(-100% + 8px);
+        }
+        .content .links ul li{
+          position: relative;
+        }
+        .content .links ul li:hover ul{
+          top: 0;
+        }
+        
+        
+        /* Responsive code start */
+        @media screen and (max-width: 1250px){
+          .wrapper nav{
+            max-width: 100%;
+            padding: 0 20px;
+          }
+          nav .content .links{
+            margin-left: 30px;
+          }
+          .content .links li a{
+            padding: 8px 13px;
+          }
+          .wrapper .search-box{
+            max-width: calc(100% - 100px);
+          }
+          .wrapper .search-box input{
+            padding: 0 100px 0 15px;
+          }
+          .dropdown{
+            margin-left: 130px;
+          }
+          .products p{
+            margin-bottom: 0;
+          }
+          .time{
+            display: none;
+          }
+          
+        }
+        
+        @media screen and (max-width: 900px){
+          .wrapper .menu-icon{
+            display: block;
+          }
+          .wrapper #show-menu:checked ~ .menu-icon i::before{
+            content: "\f00d";
+          }
+          nav .content .links{
+            display: block;
+            position: fixed;
+            background:  linear-gradient(to right, #4D4C7D, #827397);
+            height: 100%;
+            width: 100%;
+            top: 70px;
+            left: -100%;
+            margin-left: 0;
+            max-width: 350px;
+            overflow-y: auto;
+            padding-bottom: 100px;
+            transition: all 0.3s ease;
+          }
+          nav #show-menu:checked ~ .content .links{
+            left: 0%;
+          }
+          .content .links li{
+            margin: 15px 20px;
+          }
+          .content .links li a,
+          .content .links li label{
+            line-height: 40px;
+            font-size: 20px;
+            display: block;
+            padding: 15px 30px;
+            cursor: pointer;
+          }
+          .content .links li a.desktop-link{
+            display: none;
+          }
+        
+          /* dropdown responsive code start */
+          .content .links ul,
+          .content .links ul ul{
+            position: static;
+            opacity: 1;
+            visibility: visible;
+            background: none;
+            max-height: 0px;
+            overflow: hidden;
+          }
+          .content .links #show-features:checked ~ ul,
+          .content .links #show-services:checked ~ ul,
+           .content .links #show-about:checked ~ ul,
+          .content .links #show-items:checked ~ ul,
+          .content .links #show-asia:checked ~ ul,
+          .content .links #show-america:checked ~ ul,
+          .content .links #show-africa:checked ~ ul,
+          .content .links #show-australia:checked ~ ul,
+          .content .links #show-europe:checked ~ ul{
+            max-height: 100vh;
+          }
+          .content .links ul li{
+            margin: 7px 20px;
+          }
+          .content .links ul li a{
+            font-size: 18px;
+            line-height: 10px;
+            border-radius: 5px!important;
+          }
+        }
+        
+        @media screen and (max-width: 400px){
+          .wrapper nav{
+            padding: 0 10px;
+          }
+          .content .logo a{
+            font-size: 27px;
+          }
+          .wrapper .search-box{
+            max-width: calc(100% - 70px);
+          }
+          .wrapper .search-box .go-icon{
+            width: 30px;
+            right: 0;
+          }
+          .wrapper .search-box input{
+            padding-right: 30px;
+          }
+         
+        }
+        
+        .dropdown {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        }
+        
+        .projects,
+        .products {
+          position: relative;
+        }
+        
+        .projects ul,
+        .products ul {
+          margin-top: 10px;
+          position: absolute;
+          display: flex;
+          justify-content: space-around;
+          flex-direction: column;
+          align-items: center;
+          width: 80px;
+          height: 50px;
+          background: #827397;
+          left: 0px;
+          list-style: none;
+          border-radius: 5px;
+          opacity: 0;
+          pointer-events: none;
+          transform: translateY(-10px);
+          transition: all 0.4s ease;
+        }
+        .projects li,
+        .products li {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }       
+        .projects a,
+        .products a {
+          color: black;
           text-decoration: none;
-          color: gray;
         }
-
+        
+        .dropdown button,
+        .home {
+          background: none;
+          text-decoration: none;
+          border: none;
+          color: white;
+          font-size: 18px;
+          cursor: pointer;
+        }
+        
+        .projects button:focus + ul,
+        .products button:focus + ul {
+          opacity: 1;
+          pointer-events: all;
+          transform: translateY(0px);
+        }
+        .time
+        {
+          margin-left: 10px;
+          padding: 20px;
+          color: #faf9f8;
+        }
+        .content
+        {
+          cursor: pointer;
+        }
         .dark-mode-toggle {
-          position: fixed;
-          z-index: 100;
-          left: 40px;
-          color: gray;
+          color: #faf9f8;
           border: 2px solid currentColor;
           padding: 4px;
           background: transparent;
@@ -163,84 +377,125 @@ class Header extends HTMLElement {
         </style>
       </head>
 
-      <header>
-            <!-- HEADER - LOGO, LOGIN, CART-->
-          <div class="headerlogo">
-            <img class="logo" src="../public/image/logotextwhite.png"></a>
-            <div class="user">
-              <p class="greeting"></p>
-              <button class="logout">logout</button>
+        <div class="wrapper">
+        <nav>
+          <input type="checkbox" id="show-search">
+          <input type="checkbox" id="show-menu">
+          <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+          <div class="content">
+            <img src="../public/image/logotextwhite.png" width="115" height="32"></img>
+            <ul class="links">
+              <li><a href="../pages/index.html">Home</a></li>
+              <li>
+                <a href="../pages/shop.html" class="desktop-link">Shop</a>
+                <input type="checkbox" id="show-category">
+                <label for="show-category">Shop</label>
+                <ul>
+                  <li><a href="../pages/shop.html#apparels">Apparel</a></li>
+                  <li><a href="../pages/shop.html#accessories">Accessories</a></li>
+                  <li><a href="../pages/shop.html#books">Books</a></li> 
+                </ul>
+              </li>
+              <li>
+                <a href="" class="desktop-link">Continents</a>
+                <input type="checkbox" id="show-features">
+                <label for="show-features">CONTINENT</label>
+                <ul>
+                   <li>
+                    <a href="../pages/shopEurope.html" class="desktop-link">Europe</a>
+                    <input type="checkbox" id="show-europe">
+                    <label for="show-europe">Europe</label>
+                    <ul>
+                      <li><a href="../pages/shopEurope.html#apparelsEurope">APPARELS</a></li>
+                      <li><a href="../pages/shopEurope.html#accessoriesEurope">ACCESSORIES</a></li>
+                      <li><a href="../pages/shopEurope.html#booksEurope">BOOKS</a></li>
+                    </ul>
+                  </li>
+                   <li>
+                    <a href="../pages/shopAsia.html" class="desktop-link">Asia</a>
+                    <input type="checkbox" id="show-asia">
+                    <label for="show-asia">Asia</label>
+                    <ul>
+                      <li><a href="../pages/shopAsia.html#apparelsAsia">APPARELS</a></li>
+                      <li><a href="../pages/shopAsia.html#accessoriesAsia">ACCESSORIES</a></li>
+                      <li><a href="../pages/shopAsia.html#booksAsia">BOOKS</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="../pages/shopAmerica.html" class="desktop-link">America</a>
+                    <input type="checkbox" id="show-america">
+                    <label for="show-america">America</label>
+                    <ul>
+                      <li><a href="../pages/shopAmerica.html#apparelsAmerica">APPARELS</a></li>
+                      <li><a href="../pages/shopAmerica.html#accessoriesAmerica">ACCESSORIES</a></li>
+                      <li><a href="../pages/shopAmerica.html#booksAmerica">BOOKS</a></li>
+                    </ul>
+                  </li>
+                   <li>
+                    <a href="../pages/shopAustralia.html" class="desktop-link">Australia</a>
+                    <input type="checkbox" id="show-australia">
+                    <label for="show-australia">Australia</label>
+                    <ul>
+                      <li><a href="../pages/shopAustralia.html#apparelsAustralia">APPARELS</a></li>
+                      <li><a href="../pages/shopAustralia.html#accessoriesAustralia">ACCESSORIES</a></li>
+                      <li><a href="../pages/shopAustralia.html#booksAustralia">BOOKS</a></li>
+                    </ul>
+                  </li>
+             <li>
+                    <a href="../pages/shopAfrica.html" class="desktop-link">Africa</a>
+                    <input type="checkbox" id="show-africa">
+                    <label for="show-africa">Africa</label>
+                    <ul>
+                      <li><a href="../pages/shopAfrica.html#apparelsAfrica">APPARELS</a></li>
+                      <li><a href="../pages/shopAfrica.html#accessoriesAfrica">ACCESSORIES</a></li>
+                      <li><a href="../pages/shopAfrica.html#booksAfrica">BOOKS</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+          <li> <a href="../pages/about.html" class="desktop-link">About</a>
+                    <input type="checkbox" id="show-about">
+                    <label for="show-about">About</label></li>
+              <li>
+                <a href="" class="desktop-link">More</a>
+                <input type="checkbox" id="show-services">
+                <label for="show-services">More</label>
+                <ul>
+                  <li><a href="../pages/reviews.html">Reviews</a></li>
+                  <li><a href="../pages/faqs.html">FAQS</a></li>
+                  <li><a href="../pages/contact.html">Contact</a></li> 
+                </ul>
+              </li>
+          
+            </ul>
+          </div>
+          
+    
+          <div class="dropdown">
+            
+            <div class="products">
+              <button><p class="greeting">Hello</p></button>
+              <ul>
+                <li><button class="logout">Logout</button></li>
+              </ul>
             </div>
+    
+    
+            <div class="time"> 
+            <h6 id="time"></h6>
+            </div>
+
+            <!--dark mode-->
+            <div class="theme">
+              <button id="dark-mode-toggle" class="dark-mode-toggle">
+                <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496"><path fill="currentColor" d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z" transform="translate(-8 -8)"/></svg>
+              </button>
+            </div>
+    
           </div>
 
-
-          <!-- HEADER - NAV -->
-
-        <div class="headernav">
-          <!--dark mode-->
-            <button id="dark-mode-toggle" class="dark-mode-toggle">
-              <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496"><path fill="currentColor" d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z" transform="translate(-8 -8)"/></svg>
-            </button>
-            <a href="../pages/index.html">HOME</a>
-            <div class="shopDropdown">
-              <span><a href="../pages/shop.html">SHOP ALL</a></span>
-              <div class="shopDropdown-content">
-                <a href="../pages/shop.html#apparels">APPARELS</a>
-                <a href="../pages/shop.html#accessories">ACCESSORIES</a>
-                <a href="../pages/shop.html#books">BOOKS</a>
-              </div>
-            </div>
-            <a href="../pages/faqs.html">FAQS</a>
-            <a href="../pages/reviews.html">REVIEWS</a>
-            <a href="../pages/about.html">ABOUT</a>
-            <a href="../pages/contact.html">CONTACT</a>
-            <h6 id="time"></h6>
-        </div>
-
-          <!-- HEADER - NAV REGIONS -->
-        <div class="nav-regions">
-            <div class="shopDropdown">
-              <span><a href="../pages/shopAsia.html">Asia</a></span>
-              <div class="shopDropdown-content">
-                <a href="../pages/shopAsia.html#apparelsAsia">APPARELS</a>
-                <a href="../pages/shopAsia.html#accessoriesAsia">ACCESSORIES</a>
-                <a href="../pages/shopAsia.html#booksAsia">BOOKS</a>
-              </div>
-            </div>
-            <div class="shopDropdown">
-              <span><a href="../pages/shopEurope.html">Europe</a></span>
-              <div class="shopDropdown-content">
-                <a href="../pages/shopEurope.html#apparelsEurope">APPARELS</a>
-                <a href="../pages/shopEurope.html#accessoriesEurope">ACCESSORIES</a>
-                <a href="../pages/shopEurope.html#booksEurope">BOOKS</a>
-              </div>
-            </div>
-            <div class="shopDropdown">
-              <span><a href="../pages/shopAmerica.html">America</a></span>
-              <div class="shopDropdown-content">
-                <a href="../pages/shopAmerica.html#apparelsAmerica">APPARELS</a>
-                <a href="../pages/shopAmerica.html#accessoriesAmerica">ACCESSORIES</a>
-                <a href="../pages/shopAmerica.html#booksAmerica">BOOKS</a>
-              </div>
-            </div>
-            <div class="shopDropdown">
-              <span><a href="../pages/shopAustralia.html">Australia</a></span>
-              <div class="shopDropdown-content">
-                <a href="../pages/shopAustralia.html#apparelsAustralia">APPARELS</a>
-                <a href="../pages/shopAustralia.html#accessoriesAustralia">ACCESSORIES</a>
-                <a href="../pages/shopAustralia.html#booksAustralia">BOOKS</a>
-              </div>
-            </div>
-            <div class="shopDropdown">
-              <span><a href="../pages/shopAfrica.html">Africa</a></span>
-              <div class="shopDropdown-content">
-                <a href="../pages/shopAfrica.html#apparelsAfrica">APPARELS</a>
-                <a href="../pages/shopAfrica.html#accessoriesAfrica">ACCESSORIES</a>
-                <a href="../pages/shopAfrica.html#booksAfrica">BOOKS</a>
-              </div>
-            </div>
-        </div>
-      </header>
+        </nav>
+      </div>
         `
         ;
   }
@@ -297,17 +552,17 @@ currentTime();
 
 
 //login
-// const greeting = document.querySelector('.greeting');
-// window.onload = () => {
-//     if(!sessionStorage.name){
-//         location.href = '/login';
-//     }
-//     else{
-//         greeting.innerHTML = sessionStorage.name;
-//     }
-// }
-// const logOut = document.querySelector('.logout');
-// logOut.onclick = () => {
-//     sessionStorage.clear();
-//     location.reload();
-// }
+const greeting = document.querySelector('.greeting');
+window.onload = () => {
+    if(!sessionStorage.name){
+        location.href = '/login';
+    }
+    else{
+        greeting.innerHTML = sessionStorage.name;
+    }
+}
+const logOut = document.querySelector('.logout');
+logOut.onmousedown = () => {
+    sessionStorage.clear();
+    location.reload();
+}
