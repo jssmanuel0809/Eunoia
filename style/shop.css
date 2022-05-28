@@ -367,7 +367,79 @@ a {
   margin-top: 20px;
   overflow: hidden;
 }
-@media screen and (max-width: 800px) {
+
+/* ------------PRODUCT POPUP-------------- */
+   /* 'SHADOW' BEHIND CONTENT */
+  .overlay {
+    position: fixed;
+    top: 100;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(40, 36, 36, 0.5);
+    transition: opacity 200ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+  
+  /* POPUP BOX */
+.popup {
+    margin: 75px auto;
+    padding: 1px;
+    background: #fff;
+    /* border: 1px solid #666; */
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  /* CONTENT INSIDE POPUP */
+.content {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    /* text-align: center; */
+    /* background: #091033; */
+    /* background-color: white; */
+    /* opacity: 90%; */
+    font-family: 'Lato', sans-serif;
+}
+
+.img-column {
+  width : 50px;
+}
+  
+  /* CLOSE BUTTON */
+.close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 20px;
+    opacity: 0.8;
+    transition: all 200ms;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+.close:hover {
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 900px) {
   body{
       position: relative;
   }
