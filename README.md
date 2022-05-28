@@ -7,3 +7,5 @@ Instructions:
 Make sure Node and NPM are installed.
 Run " npm start " in terminal.
 Go to (http://localhost:3000) or (http://localhost:3000/login) on browser.
+The website uses PostgresSQL to store and retrieve user information for authentication purposes.
+
